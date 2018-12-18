@@ -1,0 +1,212 @@
+<!--pages/searchList/searchList.wxml-->
+<view class="search_box">
+  <icon type="search" class="search_icon" color="#6f8ffe" size="12"></icon>
+  <input type="text" placeholder='请输入您需要的需求和用户名' class="search_input" placeholder-class="index_placeholder"></input>
+  <view class="search_cancel">
+    取消
+  </view>
+</view>
+
+<view style="height:66rpx;width:100%;">
+
+</view>
+<view style="background:#f5f5f5; margin-top:28rpx;">
+  <view class="person_state_box">
+    <view class="person_state_top">
+      <image src="../img/head_1@2x.png" class="person_state_img"></image>
+      <view class="person_state_nameBox">
+        <view class="person_nickname_box">
+          <text class="person_nickname">花花小铺</text> 
+          <text class="iconfont icon-nv person_icon_nv"></text>
+          <text class="person_sex">女</text>
+        </view>
+        <view class="person_grade_box">
+          <image src="../img/gold_grey.png" style="width:19rpx;height:19rpx;" class="person_grade_img"></image>
+          <view class="person_grade">白银</view>
+        </view>
+      </view>
+      <view class="yue_btn">
+        约她
+      </view>
+    </view>
+    <view class="person_state_middle">
+      <view class="img_box">
+        <image src="../img/map_1.png" class="person_middle_img" bindtap='showBigPic' data-src="../img/pic2.jpg"></image>
+      </view>
+      <view class="img_box img_box_mid">
+        <image src="../img/map_1.png" class="person_middle_img"></image>
+      </view>
+      <view class="img_box">
+        <image src="../img/map_1.png" class="person_middle_img"></image>
+      </view>
+    </view>
+    <view class="person_state_msg">
+      电影爱好者，有个伴与你一起看电影不是更完美呢？电影爱好者，有个伴与你一起看电影不是更完美呢？电影爱好者，有个伴与你一起看电影不是更完美呢？电影爱好者，有个伴与你一起看电影不是更完美呢？
+    </view>
+    <view class="person_state_foot">
+      <view class="person_foot_label">
+        看电影
+      </view>
+      <view class="perosn_foot_sevice">
+        线下服务
+      </view>
+    </view>
+    <view class="person_love">
+      <icon class="iconfont icon-xin"></icon>
+      <text class="love_num">829</text>
+      <view class="dingwei">
+        <icon class="iconfont icon-iconfontdingwei"></icon>
+        <text class="Juli">2.1km</text>
+      </view>
+    </view>
+  </view>
+   <view class="person_state_box">
+    <view class="person_state_top">
+      <image src="../img/head_1@2x.png" class="person_state_img"></image>
+      <view class="person_state_nameBox">
+        <view class="person_nickname_box">
+          <text class="person_nickname">花花小铺</text> 
+          <text class="iconfont icon-nv person_icon_nv"></text>
+          <text class="person_sex">女</text>
+        </view>
+        <view class="person_grade_box">
+          <image src="../img/gold_grey.png" style="width:19rpx;height:19rpx;" class="person_grade_img"></image>
+          <text class="person_grade">白银</text>
+        </view>
+      </view>
+      <view class="yue_btn">
+        约她
+      </view>
+    </view>
+    <view class="person_state_middle">
+      <view class="img_box">
+        <image src="../img/map_1.png" class="person_middle_img"></image>
+      </view>
+      <view class="img_box img_box_mid">
+        <image src="../img/map_1.png" class="person_middle_img"></image>
+      </view>
+      <view class="img_box">
+        <image src="../img/map_1.png" class="person_middle_img"></image>
+      </view>
+    </view>
+    <view class="person_state_msg">
+      电影爱好者，有个伴与你一起看电影不是更完美呢？电影爱好者，有个伴与你一起看电影不是更完美呢？电影爱好者，有个伴与你一起看电影不是更完美呢？电影爱好者，有个伴与你一起看电影不是更完美呢？
+    </view>
+    <view class="person_state_foot">
+      <view class="person_foot_label">
+        看电影
+      </view>
+      <view class="perosn_foot_sevice">
+        线下服务
+      </view>
+    </view>
+    <view class="person_love">
+      <icon class="iconfont icon-xin"></icon>
+      <text class="love_num">829</text>
+      <view class="dingwei">
+        <icon class="iconfont icon-iconfontdingwei"></icon>
+        <text class="Juli">2.1km</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="person_state_box">
+    <view class="person_state_top">
+      <image src="../img/head_1@2x.png" class="person_state_img"></image>
+      <view class="person_state_nameBox">
+        <view class="person_nickname_box">
+          <text class="person_nickname">花花小铺</text> 
+          <text class="iconfont icon-nv person_icon_nv"></text>
+          <text class="person_sex">女</text>
+        </view>
+        <view class="person_grade_box">
+          <image src="../img/gold_grey.png" style="width:19rpx;height:19rpx;" class="person_grade_img"></image>
+          <text class="person_grade">白银</text>
+        </view>
+      </view>
+      <view class="yue_btn">
+        约她
+      </view>
+    </view>
+    <view class="person_state_middle">
+      <view class="img_box">
+        <image src="../img/map_1.png" class="person_middle_img"></image>
+      </view>
+      <view class="img_box img_box_mid">
+        <image src="../img/map_1.png" class="person_middle_img"></image>
+      </view>
+      <view class="img_box">
+        <image src="../img/map_1.png" class="person_middle_img"></image>
+      </view>
+    </view>
+    <view class="person_state_msg">
+      电影爱好者，有个伴与你一起看电影不是更完美呢？电影爱好者，有个伴与你一起看电影不是更完美呢？电影爱好者，有个伴与你一起看电影不是更完美呢？电影爱好者，有个伴与你一起看电影不是更完美呢？
+    </view>
+    <view class="person_state_foot">
+      <view class="person_foot_label">
+        看电影
+      </view>
+      <view class="perosn_foot_sevice">
+        线下服务
+      </view>
+    </view>
+    <view class="person_love">
+      <icon class="iconfont icon-xin"></icon>
+      <text class="love_num">829</text>
+      <view class="dingwei">
+        <icon class="iconfont icon-iconfontdingwei"></icon>
+        <text class="Juli">2.1km</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="person_state_box">
+    <view class="person_state_top">
+      <image src="../img/head_1@2x.png" class="person_state_img"></image>
+      <view class="person_state_nameBox">
+        <view class="person_nickname_box">
+          <text class="person_nickname">花花小铺</text> 
+          <text class="iconfont icon-nv person_icon_nv"></text>
+          <text class="person_sex">女</text>
+        </view>
+        <view class="person_grade_box">
+          <image src="../img/gold_grey.png" style="width:19rpx;height:19rpx;" class="person_grade_img"></image>
+          <text class="person_grade">白银</text>
+        </view>
+      </view>
+      <view class="yue_btn">
+        约她
+      </view>
+    </view>
+    <view class="person_state_middle">
+      <view class="img_box">
+        <image src="../img/map_1.png" class="person_middle_img"></image>
+      </view>
+      <view class="img_box img_box_mid">
+        <image src="../img/map_1.png" class="person_middle_img"></image>
+      </view>
+      <view class="img_box">
+        <image src="../img/map_1.png" class="person_middle_img"></image>
+      </view>
+    </view>
+    <view class="person_state_msg">
+      电影爱好者，有个伴与你一起看电影不是更完美呢？电影爱好者，有个伴与你一起看电影不是更完美呢？电影爱好者，有个伴与你一起看电影不是更完美呢？电影爱好者，有个伴与你一起看电影不是更完美呢？
+    </view>
+    <view class="person_state_foot">
+      <view class="person_foot_label">
+        看电影
+      </view>
+      <view class="perosn_foot_sevice">
+        线下服务
+      </view>
+    </view>
+    <view class="person_love">
+      <icon class="iconfont icon-xin"></icon>
+      <text class="love_num">829</text>
+      <view class="dingwei">
+        <icon class="iconfont icon-iconfontdingwei"></icon>
+        <text class="Juli">2.1km</text>
+      </view>
+    </view>
+  </view>
+</view>

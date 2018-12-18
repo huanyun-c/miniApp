@@ -1,0 +1,82 @@
+/* pages/personcenter/personcenter.wxss */
+.person_top {
+  width:100%;
+  height:274rpx;
+  background :#6e8eff;
+  padding:5rpx 20rpx 0 20rpx;
+  box-sizing: border-box;
+}
+.person_set_img {
+  width:44rpx;
+  height:44rpx;
+  float:right;
+}
+.person_headimg {
+  width:128rpx;
+  height:128rpx;
+  border-radius: 50%;
+}
+.person_level_img {
+  width:24rpx;
+  height:24rpx;
+  margin-right:25rpx;
+}
+.person_msg_box {
+  padding-left:40rpx;
+}
+.person_nickname {
+  color:#fff;
+  font-size:40rpx;
+  height:60rpx;
+  line-height: 60rpx;
+}
+.person_level_box {
+  font-size:22rpx;
+  color:#fff;
+  height:38rpx;
+  line-height: 38rpx;
+}
+.person_edit {
+  font-size:26rpx;
+  color:#fff;
+  height:30rpx;
+  line-height: 30rpx;
+  display: flex;
+}
+.icon-xiangyou {
+  height:30rpx;
+  font-size:20rpx;
+  margin-left:20rpx;
+}
+
+.person_btn_box {
+ margin-top:25rpx;
+}
+.person_btn_list {
+  display:flex;
+  width:100%;
+  padding:0 20rpx;
+  height:100rpx;
+  line-height:100rpx;
+  overflow:hidden;
+  border-bottom:1px solid #efefef;
+}
+.person_btn_img {
+  width:50rpx;
+  height:50rpx;
+  padding-top:25rpx;
+  margin-right:25rpx;
+}
+.person_btn_xiangyou {
+  display:block;
+  height:100rpx;
+  font-size:28rpx;
+  margin:0;
+  position: absolute;
+  right:20rpx;
+}
+.person_btn {
+  color:#000;
+  font-size:30rpx;
+
+}

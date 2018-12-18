@@ -1,0 +1,80 @@
+/* pages/demand_revoke_appeal/demand_revoke_appeal.wxss */
+page {
+  background: #fafafa;
+}
+.page .part {
+  padding: 20rpx;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+.page .part textarea {
+  width: 100%;
+  border: 1px solid #e1e1e1;
+  border-radius: 15rpx;
+  padding: 10rpx;
+  color: #666;
+  box-sizing: border-box;
+}
+.page .part textarea + text {
+  color: #999;
+  text-align: right;
+  display: block;
+  margin-top: -60rpx;
+  margin-right: 20rpx;
+}
+.page .title {
+  font-size: 34rpx;
+  padding: 20rpx 0;
+}
+.page label {
+  display: block;
+  padding: 15rpx 0;
+  font-size: 30rpx;
+  color: #999;
+  position: relative;
+}
+.page label radio {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.page .tip-part {
+  padding: 20rpx;
+  font-size: 28rpx;
+  color: #999;
+}
+.page .btns {
+  margin-top: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20rpx 0;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.page .btns .btn {
+  padding: 0 30rpx;
+  height: 76rpx;
+  line-height: 76rpx;
+  border-radius: 10rpx;
+  color: #fff;
+  margin: 0 15rpx;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 32rpx;
+}
+.page .btns .btn:last-child {
+  background: #6e8eff;
+}
+.page .btns .btn.default {
+  background: #ccc;
+}
+.page .paid {
+  margin-top: 80rpx;
+  text-align: center;
+  display: block;
+}

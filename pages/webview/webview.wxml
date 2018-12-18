@@ -1,0 +1,2 @@
+<!--pages/webview/webview.wxml-->
+<web-view src="http://39.108.209.85:3001/{{pages}}"></web-view>

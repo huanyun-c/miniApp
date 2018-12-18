@@ -1,0 +1,17 @@
+<!--pages/accountbox/accountbox.wxml-->
+<view>
+  <view style="display:flex;">
+    <view class="">
+      充值金额
+    </view>
+    <view>
+      充值送贡献值
+    </view>
+  </view>
+  <view style="display:flex;flex-wrap:wrap;">
+    <view wx:for="{{accountArray}}" class="account_money {{index==idx ? 'account_money_choose' : ''}}" bindtap='chooseMoney' data-id="{{index}}" data-msg="{{item.money}}" wx:key="">
+      {{item.value}}
+    </view>
+    <input type="number" class="account_money" value="{{moneyValue}}" placeholder='其他金额' bindinput="choose" bindblur="confirm"></input>
+  </view>
+</view>

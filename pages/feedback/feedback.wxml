@@ -1,0 +1,6 @@
+<!--pages/feedback/feedback.wxml-->
+<scroll-view style="height:100%;width:100%;" scroll-y>
+  
+    <image src="{{img}}" style="width:100%;height:100%;display:block;"></image>
+  
+</scroll-view>

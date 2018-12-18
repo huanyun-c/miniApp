@@ -1,0 +1,155 @@
+/* pages/demand/demand.wxss */
+/* pages/skill_management/skill_management.wxss */
+page {
+  height:100%;
+}
+swiper {
+  height:222rpx;
+}
+.slide-image{  
+    width: 100%; 
+    height:222rpx; 
+}
+
+.screen_box {
+  display: flex;
+  width:100%;
+  height:84rpx;
+  line-height: 84rpx;
+  background: #fff;
+}
+.screen_li {
+  font-size:26rpx;
+  font-weight: bold;
+  color:#333;
+  flex:1;
+  text-align: center;
+}
+.isscreen {
+   background: #6e8eff;
+   color:#fff;
+}
+
+.service_screen {
+  padding:0 22rpx;
+  height:80rpx;
+  line-height:80rpx;
+  width:100%;
+  font-size:26rpx;
+  color:#333;
+  font-weight:bold;
+}
+.icon-xiangyou {
+  position: absolute;
+  right:22rpx;
+}
+
+.ml-20 {
+  margin-left:20rpx;
+}
+.disflex {
+  display:flex;
+}
+.screen_list {
+   width:106rpx;
+   color:#333;
+   font-size:22rpx;
+   font-weight:bold;
+   text-align:justify;
+}
+.screen_list_right {
+   display:flex;
+   margin-left:34rpx;
+}
+.screen_list_label {
+  font-size:20rpx;
+  color:#c3c3c3;
+  height:28rpx;
+  border:1px solid #c3c3c3;
+  padding:0 22rpx;
+  text-align:center;
+  border-radius:5px;
+  margin: 0 10rpx;
+}
+.screen_list_label_active {
+  border:1px solid #ff6e95;
+  color:#ff6e95;
+}
+.service_box {
+   padding: 10rpx 20rpx;
+}
+.service_headImg {
+  width:70rpx;
+  height:70rpx;
+  border-radius: 50%;
+}
+.service_box_top {
+  display: flex;
+}
+.service_box_top_right {
+  margin-left:15rpx;
+  width:100%;
+}
+.service_box_top_right_nickname {
+  font-size:28rpx;
+  color:#000;
+  font-weight: bold;
+  height:38rpx;
+  line-height: 38rpx;
+  display: flex;
+}
+.service_nickname {
+  width:80%;
+  text-align: left;
+}
+.service_skill {
+  flex:1;
+  text-align: center;
+  color:#fff;
+  background:#6e8eff;
+  border-radius: 10rpx;
+}
+.service_msg_box {
+  font-size:24rpx;
+  height:44rpx;
+  line-height:44rpx;
+  color:#c8c8c8;
+}
+.service_msg {
+  width:30%;
+}
+
+.receipt_btn_box {
+  overflow: hidden;
+  height:80rpx;
+  color:#333;
+  font-size:22rpx;
+  font-weight: bold;
+  display: flex;
+  width:80%;
+  margin:auto;
+  padding-top:18rpx;
+}
+
+.colorlan {
+  background: #6e8eff;
+}
+.service_box_top {
+  padding-bottom:30rpx;
+  border-bottom:1px solid #ccc;
+}
+.receipt_headImg {
+  width:44rpx;
+  height:44rpx;
+  border-radius: 50%;
+  margin-left:20rpx;
+}
+.service_msg_40 {
+  width:40%;
+}
+.service_skill_ccc {
+  background:#ccc;
+}
+.service_box_top_overdue {
+  border-bottom:0;
+}

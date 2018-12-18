@@ -1,0 +1,64 @@
+<!--pages/personcenter/personcenter.wxml-->
+<view class="person_top">
+  <view style="height:46rpx;overflow:hidden;">
+    <image src="../img/set@2x.png" class="person_set_img" bindtap='gotoSetCenter'></image>
+  </view>
+  <view style="display:flex;height:128rpx;padding:36rpx 0;">
+    <image src="{{headMsg.headDetail}}" class="person_headimg"></image>
+    <view class="person_msg_box">
+      <view class="person_nickname">
+        {{headMsg.nicakName}}
+      </view>
+      <view class="person_level_box">
+        <image src="../img/medal@2x.png" class="person_level_img"></image>
+        青铜
+      </view>
+      <view class="person_edit" bindtap='gotoEditMsg'>
+        <view>
+          编辑您的资料
+        </view>
+        <view class="iconfont icon-xiangyou"></view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<view class="person_btn_box">
+  <view class="person_btn_list" bindtap='gotoAccount'>
+    <image src="../img/account@2x.png" class="person_btn_img"></image>
+    <view class="person_btn">
+      我的账户
+    </view>  
+    <view class="iconfont icon-xiangyou person_btn_xiangyou"></view>
+  </view>
+  <view class="person_btn_list">
+    <image src="../img/authentication@2x.png" class="person_btn_img"></image>
+    <view class="person_btn">
+      认证中心
+    </view>  
+    <view class="iconfont icon-xiangyou person_btn_xiangyou"></view>
+  </view>
+  <view class="person_btn_list">
+    <image src="../img/invite@2x.png" class="person_btn_img"></image>
+    <view class="person_btn">
+      邀请好友
+    </view>  
+    <view class="iconfont icon-xiangyou person_btn_xiangyou"></view>
+  </view>
+  <view class="person_btn_list">
+    <image src="../img/strategy@2x.png" class="person_btn_img"></image>
+    <view class="person_btn">
+      赚钱攻略
+    </view>  
+    <view class="iconfont icon-xiangyou person_btn_xiangyou"></view>
+  </view>
+  <view class="person_btn_list">
+    <image src="../img/integral@2x.png" class="person_btn_img"></image>
+    <view class="person_btn">
+      贡献值
+    </view>  
+    <view class="iconfont icon-xiangyou person_btn_xiangyou"></view>
+  </view>
+</view>
+

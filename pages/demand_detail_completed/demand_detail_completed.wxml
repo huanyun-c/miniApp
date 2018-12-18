@@ -1,0 +1,61 @@
+<!-- pages/demand_detail_completed/demand_detail_completed.wxml -->
+<view class='page'>
+    <view class='top'>
+        <view class='top-head'>
+            <image class="top-pic" src="../img/head_one@2x.png"></image>
+            <view class='top-name'>
+                <text>网游陪玩</text>
+                <view>2天过期</view>                
+            </view>
+            <image bindtap="del" class="del" src="../img/delete@3x.png"></image>
+        </view>
+        <view class='top-body'>
+            <view>
+                <text>预约时间</text>
+                2018-3-18
+            </view>
+            <view>
+                <text>结束时间</text>
+                2018-3-30
+            </view>
+            <view>
+                <text>性别要求</text>
+                不限1
+            </view>
+            <view>
+                <text>年龄要求</text>
+                不限
+            </view>
+            <view>
+                <text>服务方式</text>
+                客户到指定地址来
+            </view>
+        </view>
+    </view>
+    <view class='cantain'>
+        <view class='cantain-top'>
+            <view class='cantain-head text'>对方选择了你，请按照对方的要求完成服务。</view>
+        </view>
+        <view class='cantain-head border-none'>
+            <image src="../img/head_one@2x.png"></image>
+            <view class='head-name'>
+                <view>花花小铺</view>
+                <view class='head-address'>
+                    <image src="../img/location.png"></image>
+                    2.1km
+                </view>
+                <button class="cancel-btn">取消服务</button>
+            </view>
+        </view>
+    </view>
+
+    <!-- 取消服务 -->
+    <text class="paid">对方申请了撤销需求，此订单取消 \n 您可以重新寻找需求进行服务</text>
+
+    <!-- 对方已支付酬劳金 -->
+    <!-- <view class="paid">对方已支付酬劳金，订单结束</view> -->
+    <view class='btns'>
+        <navigator class='btn'>我已完成任务</navigator>
+        <!-- <navigator class='btn default'>等待对方确认并付款</navigator> -->
+    </view>
+</view>

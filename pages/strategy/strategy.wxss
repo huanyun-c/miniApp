@@ -1,0 +1,6 @@
+/* pages/strategy/strategy.wxss */
+page {
+  width:100%;
+  height:100%;
+  background: #3162c4;
+}

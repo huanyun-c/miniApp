@@ -1,0 +1,77 @@
+<!--pages/CommonProblem/CommonProblem.wxml-->
+<view class="person_btn_box">
+  <view class="person_btn_list">
+    
+    <view class="person_btn">
+      账号与个人信息管理
+    </view>  
+    <view class="iconfont icon-xiangyou person_btn_xiangyou"></view>
+  </view>
+  <view class="person_btn_list">
+    
+    <view class="person_btn">
+      需求管理
+    </view>  
+    <view class="iconfont icon-xiangyou person_btn_xiangyou"></view>
+  </view>
+  <view class="person_btn_list">
+   
+    <view class="person_btn">
+      技能管理
+    </view>  
+    <view class="iconfont icon-xiangyou person_btn_xiangyou"></view>
+  </view>
+  <view class="person_btn_list">
+    
+    <view class="person_btn">
+      应邀订单
+    </view>  
+    <view class="iconfont icon-xiangyou person_btn_xiangyou"></view>
+  </view>
+  <view class="person_btn_list">
+    
+    <view class="person_btn">
+      审核认证
+    </view>  
+    <view class="iconfont icon-xiangyou person_btn_xiangyou"></view>
+  </view>
+  <view class="person_btn_list">
+    
+    <view class="person_btn">
+      信息发布
+    </view>  
+    <view class="iconfont icon-xiangyou person_btn_xiangyou"></view>
+  </view>
+  <view class="person_btn_list" bindtap='gotoCommonProblem'>
+    
+    <view class="person_btn">
+      评价
+    </view>  
+    <view class="iconfont icon-xiangyou person_btn_xiangyou"></view>
+  </view>
+  <view class="person_btn_list">
+    
+    <view class="person_btn">
+      举报
+    </view>  
+    <view class="iconfont icon-xiangyou person_btn_xiangyou"></view>
+  </view>
+  <view class="person_btn_list">
+    
+    <view class="person_btn">
+      其他
+    </view>  
+    <view class="iconfont icon-xiangyou person_btn_xiangyou"></view>
+  </view>
+  <view class="person_btn_list">
+    
+    <view class="person_btn">
+      联系我们
+    </view>  
+    <view class="iconfont icon-xiangyou person_btn_xiangyou"></view>
+  </view>
+</view>
+
+
+
+

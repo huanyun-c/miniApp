@@ -1,0 +1,145 @@
+/* pages/demand_detail_completed/demand_detail_completed.wxss */
+page{
+    height: 100%;
+}
+.page{
+    background: #fafafa;
+    height:100%;
+  }
+  .top{
+    background: #fff;
+  }
+  .top-head{
+    display: flex;
+    border-bottom:1px solid #e1e1e1;
+    position: relative;
+  }
+  .top-head .top-pic{
+    margin:20rpx;
+    width:82rpx;
+    height:82rpx;
+    border-radius: 50%;
+    vertical-align: middle;
+  }
+  .top-head .top-name{
+    margin-top: 18rpx;
+    
+  }
+  .del{
+    width:38rpx;
+    height:40rpx;
+    position: absolute;
+    right:20rpx;
+    top:50%;
+    transform: translateY(-50%);
+  }
+  .top-head .top-name text{
+    color: #333;
+    font-size:34rpx;
+  }
+  .top-head .top-name view{
+    color: #999;
+    font-size:28rpx;
+  }
+  .top-body{
+    padding: 10rpx 0 10rpx 125rpx;
+  }
+  .top-body view{
+    padding: 10rpx 0;
+    font-size:32rpx;
+    color:#999;
+  }
+  .top-body view text{margin-right:20rpx;color: #333}
+  
+  .guanzhu{
+    margin-top:20rpx;
+    padding:20rpx 0 20rpx 20rpx;
+    background: #fff;
+    font-size:0;
+  }
+  .guanzhu image{
+    width:80rpx;
+    height:80rpx;
+    margin-right:20rpx;
+    border-radius: 50%;
+  }  
+  .cantain{
+    margin-top:20rpx;
+    background:#fff;
+    padding-left:20rpx;
+    padding-right:20rpx;
+  }
+  .cantain-head{
+    border-bottom:1px solid #e1e1e1;
+    display: flex;
+  }
+  .cantain-head.text{
+    font-size:32rpx;padding:20rpx 0;color:#999;
+  }
+  .cantain-head.border-none{
+      border:none;
+      position: relative;
+  }
+  .cancel-btn{
+    border-radius: 5rpx;
+    background: #fff;
+    font-size:26rpx;
+    position: absolute;
+    right:20rpx;
+    bottom:20rpx;
+  }
+  .cantain-head image{
+    width: 80rpx;
+    height:80rpx;
+    margin: 20rpx 0;
+    border-radius: 50%;
+  }
+  .cantain-head .head-name{
+    margin-top: 20rpx;
+    margin-left:20rpx;
+    font-size:30rpx;
+  }
+  .cantain-head .head-name .head-address{
+    color: #999; 
+  }
+  .cantain-head .head-name .head-address image{
+    width: 20rpx;
+    height:26rpx;
+    margin:0;
+  }
+ 
+  .btns{
+    margin-top:20rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20rpx 0;
+    background: #fff;
+    position: fixed;
+    bottom:0;
+    width:100%;
+  }
+  .btns .btn{
+    padding: 0 30rpx;
+    height: 76rpx;
+    line-height:76rpx;
+    border-radius:10rpx;
+    color:#fff;
+    margin:0 15rpx;
+    display: block;
+    width:100%;
+    text-align: center;
+    font-size:32rpx;
+  }
+
+  .btns .btn:last-child{
+    background: #6e8eff;
+  }
+  .btns .btn.default{
+    background: #ccc;
+  }
+  .paid{
+      margin-top:80rpx;
+      text-align: center;
+      display: block;
+  }

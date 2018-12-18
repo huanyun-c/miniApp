@@ -1,0 +1,28 @@
+<!-- pages/service_evaluation/service_evaluation.wxml -->
+<view class="page">
+    <view class="part" style="text-align:center;padding:40rpx;">
+        <image src="../img/cancel@2x.png" style="width:107rpx;height:107rpx;display:inline-block;"></image>
+        <rich-text name="h3" style="margin-top:30rpx;display:block;color:#ff6e95;">已完成支付</rich-text>
+    </view>
+    <view class="part">
+        <view class="title">请给对方的服务做出评价：</view>
+        <textarea placeholder="" maxlength="200" bindinput="wordsNum" />
+        <text>{{currentWordNumber|0}}/{{maxWordNumber}}</text>
+        <view style="text-align:right;color:#999;margin-top:20rpx;font-size:30rpx;">
+            您的评价能帮助其他小伙伴哟
+        </view>
+    </view>
+    <view class="part part-flex">
+        <view>服务态度</view>
+        <view>
+            <image src="../img/star.png"></image>
+            <image src="../img/star_gray.png"></image>
+            <image src="../img/star_gray.png"></image>
+            <image src="../img/star_gray.png"></image>
+            <image src="../img/star_gray.png"></image>
+        </view>
+    </view>
+    <view class='btns'>
+        <navigator class='btn'>发布</navigator>
+    </view>
+</view>

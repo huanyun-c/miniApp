@@ -1,0 +1,861 @@
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">  
+      <block wx:for="{{imgUrls}}" wx:key="">  
+        <swiper-item>  
+            <image src="{{item}}" class="slide-image"/>  
+        </swiper-item>  
+      </block>  
+</swiper>
+
+
+<view class="screen_box">
+  <view data-index="0" class="{{ nowCurrent == 0 ? 'screen_li isscreen' : 'screen_li' }}" bindtap='screenLiChange'>
+    待接单
+  </view>
+  <view data-index="1" class="{{ nowCurrent == 1 ? 'screen_li isscreen' : 'screen_li' }}" bindtap='screenLiChange'>
+    已接单
+  </view>
+  <view data-index="2" class="{{ nowCurrent == 2 ? 'screen_li isscreen' : 'screen_li' }}" bindtap='screenLiChange'>
+    已完成
+  </view>
+  <view data-index="3" class="{{ nowCurrent == 3 ? 'screen_li isscreen' : 'screen_li' }}" bindtap='screenLiChange'>
+    已过期
+  </view>
+</view>
+
+<swiper style="height:calc(100% - 306rpx);" bindchange="swiperChange" current="{{swiperIndex}}">
+   <swiper-item>
+    <scroll-view style="height:100%;" scroll-y="true" scroll-top="0" lower-threshold="50" scroll-with-animation="true" enable-back-to-top="true" bindscrolltolower="scrolltolower">
+    <!-- 服务筛选start -->
+      <view>
+        <view class="service_screen" bindtap='screenMsg'>
+        服务筛选
+        <icon class="iconfont {{screenMsg ? 'icon-xiangyou' : 'icon-xiangxia'}}"></icon>
+      </view>
+    <!-- 筛选类别start -->
+      <view class="ml-20 {{screenMsg ? 'screenTrue' : ''}}">
+        <view class="disflex">
+          <view class="screen_list">
+            性别<i style="display:inline-block;width:100%;height:0;"></i>
+          </view>
+          <view class="screen_list_right">
+            <view class="screen_list_label">
+              男
+            </view>
+            <view class="screen_list_label screen_list_label_active">
+              女
+            </view>
+          </view>
+        </view>
+        <view class="disflex">
+          <view class="screen_list">
+            年龄<i style="display:inline-block;width:100%;height:0;"></i>
+          </view>
+          <view class="screen_list_right">
+            <view class="screen_list_label">
+              20
+            </view>
+            <view class="screen_list_label screen_list_label_active">
+              21-25
+            </view>
+            <view class="screen_list_label">
+              25-30
+            </view>
+            <view class="screen_list_label">
+              30以上
+            </view>
+          </view>
+        </view>
+        <view class="disflex">
+          <view class="screen_list">
+            距离<i style="display:inline-block;width:100%;height:0;"></i>
+          </view>
+          <view class="screen_list_right">
+            <view class="screen_list_label">
+              500m
+            </view>
+            <view class="screen_list_label screen_list_label_active">
+              1km
+            </view>
+            <view class="screen_list_label">
+              2km
+            </view>
+            <view class="screen_list_label">
+              3km以上
+            </view>
+          </view>
+        </view>
+        <view class="disflex">
+          <view class="screen_list">
+            服务方式<i style="display:inline-block;width:100%;height:0;"></i>
+          </view>
+          <view class="screen_list_right">
+            <view class="screen_list_label screen_list_label_active">
+              线上服务
+            </view>
+            <view class="screen_list_label">
+              线下服务
+            </view>
+          </view>
+        </view>
+
+      </view>
+      <!-- 服务筛选end -->
+
+      <!-- 服务列表start -->
+        <view class="service_box" >
+          <view class="disflex">
+            <image src="../img/head_1@2x.png" class="service_headImg"></image>
+            <view class="service_box_top_right">
+              <view class="disflex service_box_top_right_nickname">
+                <view class="service_nickname">
+                  花花小铺
+                </view>
+                <view class="service_skill">
+                  陪游
+                </view>  
+              </view>
+              <view class="disflex service_msg_box">
+                <view class="service_msg">
+                  <text class="iconfont icon-nv"></text>
+                  <text class="service_age">21岁</text>
+                </view>
+                <view class="service_msg">
+                  2.1km
+                </view>
+                <view class="service_msg">
+                  2天后过期
+                </view>
+                <view class="service_msg">
+                  ￥100
+                </view>
+              </view>
+            </view>
+          </view>
+          <!-- 分享btn -->
+          <view class="receipt_btn_box">            
+            <button class="receipt_btn" bindtap='gotoDemandDetails'>立即接单</button>
+            <button class="share_btn" bindtap="share">分享</button>
+          </view>
+        </view>
+
+        <view class="service_box">
+          <view class="disflex">
+            <image src="../img/head_1@2x.png" class="service_headImg"></image>
+            <view class="service_box_top_right">
+              <view class="disflex service_box_top_right_nickname">
+                <view class="service_nickname">
+                  花花小铺
+                </view>
+                <view class="service_skill">
+                  陪游
+                </view>  
+              </view>
+              <view class="disflex service_msg_box">
+                <view class="service_msg">
+                  <text class="iconfont icon-nv"></text>
+                  <text class="service_age">21岁</text>
+                </view>
+                <view class="service_msg">
+                  2.1km
+                </view>
+                <view class="service_msg">
+                  2天后过期
+                </view>
+                <view class="service_msg">
+                  ￥100
+                </view>
+              </view>
+            </view>
+          </view>
+          <!-- 分享btn -->
+          <view class="receipt_btn_box">
+            <button class="receipt_btn">立即接单</button>
+          </view>
+        </view>
+
+        <view class="service_box">
+          <view class="disflex">
+            <image src="../img/head_1@2x.png" class="service_headImg"></image>
+            <view class="service_box_top_right">
+              <view class="disflex service_box_top_right_nickname">
+                <view class="service_nickname">
+                  花花小铺
+                </view>
+                <view class="service_skill">
+                  陪游
+                </view>  
+              </view>
+              <view class="disflex service_msg_box">
+                <view class="service_msg">
+                  <text class="iconfont icon-nv"></text>
+                  <text class="service_age">21岁</text>
+                </view>
+                <view class="service_msg">
+                  2.1km
+                </view>
+                <view class="service_msg">
+                  2天后过期
+                </view>
+                <view class="service_msg">
+                  ￥100
+                </view>
+              </view>
+            </view>
+          </view>
+          <!-- 分享btn -->
+          <view class="receipt_btn_box">
+            <button class="receipt_btn">立即接单</button>
+          </view>
+        </view>
+
+        <view class="service_box">
+          <view class="disflex">
+            <image src="../img/head_1@2x.png" class="service_headImg"></image>
+            <view class="service_box_top_right">
+              <view class="disflex service_box_top_right_nickname">
+                <view class="service_nickname">
+                  花花小铺
+                </view>
+                <view class="service_skill">
+                  陪游
+                </view>  
+              </view>
+              <view class="disflex service_msg_box">
+                <view class="service_msg">
+                  <text class="iconfont icon-nv"></text>
+                  <text class="service_age">21岁</text>
+                </view>
+                <view class="service_msg">
+                  2.1km
+                </view>
+                <view class="service_msg">
+                  2天后过期
+                </view>
+                <view class="service_msg">
+                  ￥100
+                </view>
+              </view>
+            </view>
+          </view>
+          <!-- 分享btn -->
+          <view class="receipt_btn_box">
+            <button class="receipt_btn">立即接单</button>
+          </view>
+        </view>
+
+        <view class="service_box">
+          <view class="disflex">
+            <image src="../img/head_1@2x.png" class="service_headImg"></image>
+            <view class="service_box_top_right">
+              <view class="disflex service_box_top_right_nickname">
+                <view class="service_nickname">
+                  花花小铺
+                </view>
+                <view class="service_skill">
+                  陪游
+                </view>  
+              </view>
+              <view class="disflex service_msg_box">
+                <view class="service_msg">
+                  <text class="iconfont icon-nv"></text>
+                  <text class="service_age">21岁</text>
+                </view>
+                <view class="service_msg">
+                  2.1km
+                </view>
+                <view class="service_msg">
+                  2天后过期
+                </view>
+                <view class="service_msg">
+                  ￥100
+                </view>
+              </view>
+            </view>
+          </view>
+          <!-- 分享btn -->
+          <view class="receipt_btn_box">
+            <button class="receipt_btn">立即接单</button>
+          </view>
+        </view>
+      <!-- 服务列表end -->
+    </view>
+     <!-- 待接单end -->
+    </scroll-view>
+    
+   </swiper-item>
+
+   <!-- 已接单页面 -->
+   <swiper-item>
+    <scroll-view style="height:100%;" scroll-y="true" scroll-top="0" lower-threshold="50" scroll-with-animation="true" enable-back-to-top="true" bindscrolltolower="scrolltolower">
+    <!-- 服务筛选start -->
+      <view>
+        <view class="service_screen">
+        服务筛选
+        <icon class="iconfont icon-xiangyou"></icon>
+      </view>
+    <!-- 筛选类别start -->
+      <view class="ml-20">
+        <view class="disflex">
+          <view class="screen_list">
+            类型<i style="display:inline-block;width:100%;height:0;"></i>
+          </view>
+          <view class="screen_list_right">
+            <view class="screen_list_label">
+              未签单
+            </view>
+            <view class="screen_list_label screen_list_label_active">
+              服务中
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 服务筛选end -->
+
+      <!-- 服务列表start -->
+        <navigator class="service_box" url="/pages/demand_detail_completed/demand_detail_completed">
+          <view class="disflex">
+            <image src="../img/head_1@2x.png" class="service_headImg"></image>
+            <view class="service_box_top_right">
+              <view class="disflex service_box_top_right_nickname">
+                <view class="service_nickname">
+                  花花小铺
+                </view>
+                <view class="service_skill">
+                  陪游
+                </view>  
+              </view>
+              <view class="disflex service_msg_box">
+                <view class="service_msg">
+                  <text class="iconfont icon-nv"></text>
+                  <text class="service_age">21岁</text>
+                </view>
+                <view class="service_msg">
+                  2.1km
+                </view>
+                <view class="service_msg">
+                  2天后过期
+                </view>
+                <view class="service_msg">
+                  ￥100
+                </view>
+              </view>
+            </view>
+          </view>
+          <!-- 分享btn -->
+          <view class="receipt_btn_box">
+            <button class="receipt_btn colorlan">服务中</button>
+          </view>
+        </navigator>
+
+        <view class="service_box">
+          <view class="disflex">
+            <image src="../img/head_1@2x.png" class="service_headImg"></image>
+            <view class="service_box_top_right">
+              <view class="disflex service_box_top_right_nickname">
+                <view class="service_nickname">
+                  花花小铺
+                </view>
+                <view class="service_skill">
+                  陪游
+                </view>  
+              </view>
+              <view class="disflex service_msg_box">
+                <view class="service_msg">
+                  <text class="iconfont icon-nv"></text>
+                  <text class="service_age">21岁</text>
+                </view>
+                <view class="service_msg">
+                  2.1km
+                </view>
+                <view class="service_msg">
+                  2天后过期
+                </view>
+                <view class="service_msg">
+                  ￥100
+                </view>
+              </view>
+            </view>
+          </view>
+          <!-- 分享btn -->
+          <view class="receipt_btn_box">
+            <button class="receipt_btn colorlan">未签单</button>
+          </view>
+        </view>
+
+        <view class="service_box">
+          <view class="disflex">
+            <image src="../img/head_1@2x.png" class="service_headImg"></image>
+            <view class="service_box_top_right">
+              <view class="disflex service_box_top_right_nickname">
+                <view class="service_nickname">
+                  花花小铺
+                </view>
+                <view class="service_skill">
+                  陪游
+                </view>  
+              </view>
+              <view class="disflex service_msg_box">
+                <view class="service_msg">
+                  <text class="iconfont icon-nv"></text>
+                  <text class="service_age">21岁</text>
+                </view>
+                <view class="service_msg">
+                  2.1km
+                </view>
+                <view class="service_msg">
+                  2天后过期
+                </view>
+                <view class="service_msg">
+                  ￥100
+                </view>
+              </view>
+            </view>
+          </view>
+          <!-- 分享btn -->
+          <view class="receipt_btn_box">
+            <button class="receipt_btn colorlan">服务中</button>
+          </view>
+        </view>
+
+        <view class="service_box">
+          <view class="disflex">
+            <image src="../img/head_1@2x.png" class="service_headImg"></image>
+            <view class="service_box_top_right">
+              <view class="disflex service_box_top_right_nickname">
+                <view class="service_nickname">
+                  花花小铺
+                </view>
+                <view class="service_skill">
+                  陪游
+                </view>  
+              </view>
+              <view class="disflex service_msg_box">
+                <view class="service_msg">
+                  <text class="iconfont icon-nv"></text>
+                  <text class="service_age">21岁</text>
+                </view>
+                <view class="service_msg">
+                  2.1km
+                </view>
+                <view class="service_msg">
+                  2天后过期
+                </view>
+                <view class="service_msg">
+                  ￥100
+                </view>
+              </view>
+            </view>
+          </view>
+          <!-- 分享btn -->
+          <view class="receipt_btn_box">
+            <button class="receipt_btn colorlan">未签单</button>
+          </view>
+        </view>
+
+        <view class="service_box">
+          <view class="disflex">
+            <image src="../img/head_1@2x.png" class="service_headImg"></image>
+            <view class="service_box_top_right">
+              <view class="disflex service_box_top_right_nickname">
+                <view class="service_nickname">
+                  花花小铺
+                </view>
+                <view class="service_skill">
+                  陪游
+                </view>  
+              </view>
+              <view class="disflex service_msg_box">
+                <view class="service_msg">
+                  <text class="iconfont icon-nv"></text>
+                  <text class="service_age">21岁</text>
+                </view>
+                <view class="service_msg">
+                  2.1km
+                </view>
+                <view class="service_msg">
+                  2天后过期
+                </view>
+                <view class="service_msg">
+                  ￥100
+                </view>
+              </view>
+            </view>
+          </view>
+          <!-- 分享btn -->
+          <view class="receipt_btn_box">
+            <button class="receipt_btn colorlan">服务中</button>
+          </view>
+        </view>
+      <!-- 服务列表end -->
+    </view>
+     <!-- 待接单end -->
+    </scroll-view>
+   </swiper-item>
+   <!-- 已完成页面 -->
+   <swiper-item>
+    <scroll-view style="height:100%;" scroll-y="true" scroll-top="0" lower-threshold="50" scroll-with-animation="true" enable-back-to-top="true" bindscrolltolower="scrolltolower">
+      <!-- 服务列表start -->
+        <view class="service_box">
+          <view class="disflex">
+            <image src="../img/head_1@2x.png" class="service_headImg"></image>
+            <view class="service_box_top_right">
+              <view class="disflex service_box_top_right_nickname">
+                <view class="service_nickname">
+                  花花小铺
+                </view>
+                <view class="service_skill">
+                  陪游
+                </view>  
+              </view>
+              <view class="disflex service_msg_box">
+                <view class="service_msg">
+                  <text class="iconfont icon-nv"></text>
+                  <text class="service_age">21岁</text>
+                </view>
+                <view class="service_msg">
+                  2.1km
+                </view>
+                <view class="service_msg">
+                  已结清款项
+                </view>
+                <view class="service_msg">
+                  ￥100
+                </view>
+              </view>
+            </view>
+          </view>
+          <!-- 分享btn -->
+          <view class="receipt_btn_box">
+            <button class="receipt_btn colorlan">已完成</button>
+          </view>
+        </view>
+
+        <view class="service_box">
+          <view class="disflex">
+            <image src="../img/head_1@2x.png" class="service_headImg"></image>
+            <view class="service_box_top_right">
+              <view class="disflex service_box_top_right_nickname">
+                <view class="service_nickname">
+                  花花小铺
+                </view>
+                <view class="service_skill">
+                  陪游
+                </view>  
+              </view>
+              <view class="disflex service_msg_box">
+                <view class="service_msg">
+                  <text class="iconfont icon-nv"></text>
+                  <text class="service_age">21岁</text>
+                </view>
+                <view class="service_msg">
+                  2.1km
+                </view>
+                <view class="service_msg">
+                  已结清款项
+                </view>
+                <view class="service_msg">
+                  ￥100
+                </view>
+              </view>
+            </view>
+          </view>
+          <!-- 分享btn -->
+          <view class="receipt_btn_box">
+            <button class="receipt_btn colorlan">已完成</button>
+          </view>
+        </view>
+
+        <view class="service_box">
+          <view class="disflex">
+            <image src="../img/head_1@2x.png" class="service_headImg"></image>
+            <view class="service_box_top_right">
+              <view class="disflex service_box_top_right_nickname">
+                <view class="service_nickname">
+                  花花小铺
+                </view>
+                <view class="service_skill">
+                  陪游
+                </view>  
+              </view>
+              <view class="disflex service_msg_box">
+                <view class="service_msg">
+                  <text class="iconfont icon-nv"></text>
+                  <text class="service_age">21岁</text>
+                </view>
+                <view class="service_msg">
+                  2.1km
+                </view>
+                <view class="service_msg">
+                  已结清款项
+                </view>
+                <view class="service_msg">
+                  ￥100
+                </view>
+              </view>
+            </view>
+          </view>
+          <!-- 分享btn -->
+          <view class="receipt_btn_box">
+            <button class="receipt_btn colorlan">已完成</button>
+          </view>
+        </view>
+
+        <view class="service_box">
+          <view class="disflex">
+            <image src="../img/head_1@2x.png" class="service_headImg"></image>
+            <view class="service_box_top_right">
+              <view class="disflex service_box_top_right_nickname">
+                <view class="service_nickname">
+                  花花小铺
+                </view>
+                <view class="service_skill">
+                  陪游
+                </view>  
+              </view>
+              <view class="disflex service_msg_box">
+                <view class="service_msg">
+                  <text class="iconfont icon-nv"></text>
+                  <text class="service_age">21岁</text>
+                </view>
+                <view class="service_msg">
+                  2.1km
+                </view>
+                <view class="service_msg">
+                  已结清款项
+                </view>
+                <view class="service_msg">
+                  ￥100
+                </view>
+              </view>
+            </view>
+          </view>
+          <!-- 分享btn -->
+          <view class="receipt_btn_box">
+            <button class="receipt_btn colorlan">已完成</button>
+          </view>
+        </view>
+
+        <view class="service_box">
+          <view class="disflex">
+            <image src="../img/head_1@2x.png" class="service_headImg"></image>
+            <view class="service_box_top_right">
+              <view class="disflex service_box_top_right_nickname">
+                <view class="service_nickname">
+                  花花小铺
+                </view>
+                <view class="service_skill">
+                  陪游
+                </view>  
+              </view>
+              <view class="disflex service_msg_box">
+                <view class="service_msg">
+                  <text class="iconfont icon-nv"></text>
+                  <text class="service_age">21岁</text>
+                </view>
+                <view class="service_msg">
+                  2.1km
+                </view>
+                <view class="service_msg">
+                  已结清款项
+                </view>
+                <view class="service_msg">
+                  ￥100
+                </view>
+              </view>
+            </view>
+          </view>
+          <!-- 分享btn -->
+          <view class="receipt_btn_box">
+            <button class="receipt_btn colorlan">已完成</button>
+          </view>
+        </view>
+      <!-- 服务列表end -->
+     <!-- 待接单end -->
+    </scroll-view>
+   </swiper-item>
+   <!-- 已过期页面 -->
+   <swiper-item>
+    <scroll-view style="height:100%;" scroll-y="true" scroll-top="0" lower-threshold="50" scroll-with-animation="true" enable-back-to-top="true" bindscrolltolower="scrolltolower">
+      <!-- 服务列表start -->
+        <view class="service_box">
+          <view class="disflex">
+            <image src="../img/head_1@2x.png" class="service_headImg"></image>
+            <view class="service_box_top_right">
+              <view class="disflex service_box_top_right_nickname">
+                <view class="service_nickname">
+                  花花小铺
+                </view>
+                <view class="service_skill">
+                  陪游
+                </view>  
+              </view>
+              <view class="disflex service_msg_box">
+                <view class="service_msg">
+                  <text class="iconfont icon-nv"></text>
+                  <text class="service_age">21岁</text>
+                </view>
+                <view class="service_msg">
+                  2.1km
+                </view>
+                <view class="service_msg">
+                  已过期
+                </view>
+                <view class="service_msg">
+                  ￥100
+                </view>
+              </view>
+            </view>
+          </view>
+          <!-- 分享btn -->
+          <view class="receipt_btn_box">
+            <button class="receipt_btn">重新发布</button>
+          </view>
+        </view>
+
+        <view class="service_box">
+          <view class="disflex">
+            <image src="../img/head_1@2x.png" class="service_headImg"></image>
+            <view class="service_box_top_right">
+              <view class="disflex service_box_top_right_nickname">
+                <view class="service_nickname">
+                  花花小铺
+                </view>
+                <view class="service_skill">
+                  陪游
+                </view>  
+              </view>
+              <view class="disflex service_msg_box">
+                <view class="service_msg">
+                  <text class="iconfont icon-nv"></text>
+                  <text class="service_age">21岁</text>
+                </view>
+                <view class="service_msg">
+                  2.1km
+                </view>
+                <view class="service_msg">
+                  已过期
+                </view>
+                <view class="service_msg">
+                  ￥100
+                </view>
+              </view>
+            </view>
+          </view>
+          <!-- 分享btn -->
+          <view class="receipt_btn_box">
+            <button class="receipt_btn">重新发布</button>
+          </view>
+        </view>
+
+        <view class="service_box">
+          <view class="disflex">
+            <image src="../img/head_1@2x.png" class="service_headImg"></image>
+            <view class="service_box_top_right">
+              <view class="disflex service_box_top_right_nickname">
+                <view class="service_nickname">
+                  花花小铺
+                </view>
+                <view class="service_skill">
+                  陪游
+                </view>  
+              </view>
+              <view class="disflex service_msg_box">
+                <view class="service_msg">
+                  <text class="iconfont icon-nv"></text>
+                  <text class="service_age">21岁</text>
+                </view>
+                <view class="service_msg">
+                  2.1km
+                </view>
+                <view class="service_msg">
+                  已过期
+                </view>
+                <view class="service_msg">
+                  ￥100
+                </view>
+              </view>
+            </view>
+          </view>
+          <!-- 分享btn -->
+          <view class="receipt_btn_box">
+            <button class="receipt_btn">重新发布</button>
+          </view>
+        </view>
+
+        <view class="service_box">
+          <view class="disflex">
+            <image src="../img/head_1@2x.png" class="service_headImg"></image>
+            <view class="service_box_top_right">
+              <view class="disflex service_box_top_right_nickname">
+                <view class="service_nickname">
+                  花花小铺
+                </view>
+                <view class="service_skill">
+                  陪游
+                </view>  
+              </view>
+              <view class="disflex service_msg_box">
+                <view class="service_msg">
+                  <text class="iconfont icon-nv"></text>
+                  <text class="service_age">21岁</text>
+                </view>
+                <view class="service_msg">
+                  2.1km
+                </view>
+                <view class="service_msg">
+                  已过期
+                </view>
+                <view class="service_msg">
+                  ￥100
+                </view>
+              </view>
+            </view>
+          </view>
+          <!-- 分享btn -->
+          <view class="receipt_btn_box">
+            <button class="receipt_btn">重新发布</button>
+          </view>
+        </view>
+
+        <view class="service_box">
+          <view class="disflex">
+            <image src="../img/head_1@2x.png" class="service_headImg"></image>
+            <view class="service_box_top_right">
+              <view class="disflex service_box_top_right_nickname">
+                <view class="service_nickname">
+                  花花小铺
+                </view>
+                <view class="service_skill">
+                  陪游
+                </view>  
+              </view>
+              <view class="disflex service_msg_box">
+                <view class="service_msg">
+                  <text class="iconfont icon-nv"></text>
+                  <text class="service_age">21岁</text>
+                </view>
+                <view class="service_msg">
+                  2.1km
+                </view>
+                <view class="service_msg">
+                  已过期
+                </view>
+                <view class="service_msg">
+                  ￥100
+                </view>
+              </view>
+            </view>
+          </view>
+          <!-- 分享btn -->
+          <view class="receipt_btn_box">
+            <button class="receipt_btn">重新发布</button>
+          </view>
+        </view>
+      <!-- 服务列表end -->
+     <!-- 待接单end -->
+    </scroll-view>
+   </swiper-item>
+</swiper>
+
+
+

@@ -1,0 +1,295 @@
+<!--index.wxml-->
+
+<view class="index_header {{topClass ? 'backchange' : ''}}">
+  <image bindtap="bindViewTap" class="index_headImg" src="{{userInfo.headDetail}}" background-size="cover" wx-if="{{userInfo}}"></image>
+  <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" wx:else>授权</button>
+  <view class="search_box">
+    <view class="index_search" bindtap='gotoSearch'>
+      搜索商家、服务
+    </view>
+    <icon type="search" class="search_icon" color="#757374" size="18"></icon>
+  </view>
+  <view class="city_box" bindtap='chooseCity'>
+    <view class="city {{cityClass ? 'colorfff' : ''}}">
+      {{city}}
+    </view>
+    <view class="iconfont icon-iconfontdingwei {{cityClass ? 'colorfff' : ''}}"></view>
+  </view>
+</view>
+
+<scroll-view bindscroll="scroll" scroll-y style="height:100%;">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+    <block wx:for="{{imgUrls}}" wx:key="">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class="sevice_box">
+    <view class="sevice_img_box" data-mbId="{{item.mbId}}" bindtap='gotoDemandList' wx:for="{{MainButtonList}}" wx:key="">
+      <image src="{{item.urlDetail}}" class="icon_img"></image>
+      <view class="sevice_p">{{item.mbName}}</view>
+    </view>
+  </view>
+
+  <view class="instant_box">
+    <view class="instant">
+      <image src="../img/jky.png" class="jky"></image>
+    </view>
+    <view class="sevice_person_box">
+      <view class="sevice_preson_truebox">
+        <view class="sevice_person" wx:for="{{ImmediateList}}" wx:key="">
+          <image src="{{item.headDetail}}" class="sevice_person_headimg"></image>
+          <view style="border:1px solid #eee;padding-bottom:14rpx;">
+            <view class="sevice_person_nickname">
+              <text style="width:100rpx;display:block;">{{item.nickName}}</text>
+              <text class="iconfont icon-nv"></text>
+              <text class="age">{{item.age}}</text>
+            </view>
+            <view class="sevice_person_msg">
+              已服务
+              <text>2298</text>人
+              <!-- <text class="grade">白银</text> -->
+            </view>
+          </view>
+
+          <text class="sevice_person_label">{{item.skills}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="container_box">
+    <view class="container_left">
+      <image src="{{containerImg}}" class="container_img"></image>
+    </view>
+    <view class="container_mid">
+      <view>
+        3月18日8：00平台开放100万活力贝，记得过来挖哦！
+      </view>
+    </view>
+    <view class="contaniner_right">
+      <image src="{{minerImg}}" class="container_miner_img pl-20"></image>
+    </view>
+  </view>
+
+  <view class="feedback_box">
+    <view class="feedback" bindtap='gotofeedback' wx:for="{{deputyButtonList}}">
+      <image src="{{item.urlDetail}}" class="feedback_img"></image>
+      <view class="feecback_title">
+        {{item.mbName}}
+      </view>
+    </view>
+  </view>
+  <!-- <view class="screen_box {{screenBoxStatus=='1' ? 'screen_box_po' : ''}}"> -->
+  <view class="screen_box">
+    <view data-index="0" class="{{ nowCurrent == 0 ? 'screen_li isscreen' : 'screen_li' }}" bindtap='screenLiChange'>
+      智能匹配
+    </view>
+    <view data-index="1" class="{{ nowCurrent == 1 ? 'screen_li isscreen' : 'screen_li' }}" bindtap='screenLiChange'>
+      最高评价
+    </view>
+    <view data-index="2" class="{{ nowCurrent == 2 ? 'screen_li isscreen' : 'screen_li' }}" bindtap='screenLiChange'>
+      距离最近
+    </view>
+    <view data-index="3" class="{{ nowCurrent == 3 ? 'screen_li isscreen' : 'screen_li' }}" bindtap='screenLiChange'>
+      高级筛选
+    </view>
+  </view>
+  <view id="id">
+    <view class="screec_row">
+        <view class="screen_label screen_label_dif">
+          年龄
+        </view>
+        <view style="display:flex;flex:1;">
+          <view class="screen_label screen_label_1">
+            自定义
+          </view>
+          <view class="screen_label screen_label_1 screen_choose">
+            25以下
+          </view>
+          <view class="screen_label screen_label_1">
+            25-35
+          </view>
+          <view class="screen_label screen_label_1">
+            35以上
+          </view>
+        </view>
+    </view>
+    <view class="screec_row">
+        <view class="screen_label screen_label_dif">
+          性别
+        </view>
+        <view style="display:flex;flex:1;">
+          <view class="screen_label screen_label_1 screen_choose">
+            男
+          </view>
+          <view class="screen_label screen_label_1">
+            女
+          </view>
+        </view>
+    </view>
+    <view class="screec_row">
+        <view class="screen_label screen_label_dif">
+          认证情况
+        </view>
+        <view style="display:flex;flex:1;">
+          <view class="screen_label screen_choose screen_label_1">
+            身份认证
+          </view>
+          <view class="screen_label screen_label_1">
+            技能认证
+          </view>
+        </view>
+    </view>
+  </view>
+
+  <view class="person_state_box">
+    <view class="person_state_top">
+      <image src="../img/head_1@2x.png" class="person_state_img"></image>
+      <view class="person_state_nameBox">
+        <view class="person_nickname_box">
+          <text class="person_nickname">花花小铺</text>
+          <text class="iconfont icon-nv person_icon_nv"></text>
+          <text class="person_sex">女</text>
+        </view>
+        <view class="person_grade_box">
+          <image src="../img/gold_grey.png" class="person_grade_img"></image>
+          <text class="person_grade">白银</text>
+        </view>
+      </view>
+      <view class="yue_btn">
+        约她
+      </view>
+    </view>
+    <view class="person_state_middle">
+      <view class="img_box">
+        <image src="../img/map_1.png" class="person_middle_img"></image>
+      </view>
+      <view class="img_box img_box_mid">
+        <image src="../img/map_1.png" class="person_middle_img"></image>
+      </view>
+      <view class="img_box">
+        <image src="../img/map_1.png" class="person_middle_img"></image>
+      </view>
+    </view>
+    <view class="person_state_msg">
+      电影爱好者，有个伴与你一起看电影不是更完美呢？电影爱好者，有个伴与你一起看电影不是更完美呢 ？电影爱好者，有个伴与你一起看电影不是更完美呢？电影爱好者，有个伴与你一起看电影不是更完美呢？
+    </view>
+    <view class="person_state_foot">
+      <view class="person_foot_label">
+        看电影
+      </view>
+      <view class="perosn_foot_sevice">
+        线下服务
+      </view>
+    </view>
+    <view class="person_love">
+      <icon class="iconfont icon-xin"></icon>
+      <text class="love_num">829</text>
+      <view class="dingwei">
+        <icon class="iconfont icon-iconfontdingwei"></icon>
+        <text class="Juli">2.1km</text>
+      </view>
+    </view>
+  </view>
+    <view class="person_state_box">
+    <view class="person_state_top">
+      <image src="../img/head_1@2x.png" class="person_state_img"></image>
+      <view class="person_state_nameBox">
+        <view class="person_nickname_box">
+          <text class="person_nickname">花花小铺</text>
+          <text class="iconfont icon-nv person_icon_nv"></text>
+          <text class="person_sex">女</text>
+        </view>
+        <view class="person_grade_box">
+          <image src="../img/gold_grey.png" class="person_grade_img"></image>
+          <text class="person_grade">白银</text>
+        </view>
+      </view>
+      <view class="yue_btn">
+        约她
+      </view>
+    </view>
+    <view class="person_state_middle">
+      <view class="img_box">
+        <image src="../img/map_1.png" class="person_middle_img"></image>
+      </view>
+      <view class="img_box img_box_mid">
+        <image src="../img/map_1.png" class="person_middle_img"></image>
+      </view>
+      <view class="img_box">
+        <image src="../img/map_1.png" class="person_middle_img"></image>
+      </view>
+    </view>
+    <view class="person_state_msg">
+      电影爱好者，有个伴与你一起看电影不是更完美呢？电影爱好者，有个伴与你一起看电影不是更完美呢 ？电影爱好者，有个伴与你一起看电影不是更完美呢？电影爱好者，有个伴与你一起看电影不是更完美呢？
+    </view>
+    <view class="person_state_foot">
+      <view class="person_foot_label">
+        看电影
+      </view>
+      <view class="perosn_foot_sevice">
+        线下服务
+      </view>
+    </view>
+    <view class="person_love">
+      <icon class="iconfont icon-xin"></icon>
+      <text class="love_num">829</text>
+      <view class="dingwei">
+        <icon class="iconfont icon-iconfontdingwei"></icon>
+        <text class="Juli">2.1km</text>
+      </view>
+    </view>
+  </view>
+    <view class="person_state_box">
+    <view class="person_state_top">
+      <image src="../img/head_1@2x.png" class="person_state_img"></image>
+      <view class="person_state_nameBox">
+        <view class="person_nickname_box">
+          <text class="person_nickname">花花小铺</text>
+          <text class="iconfont icon-nv person_icon_nv"></text>
+          <text class="person_sex">女</text>
+        </view>
+        <view class="person_grade_box">
+          <image src="../img/gold_grey.png" class="person_grade_img"></image>
+          <text class="person_grade">白银</text>
+        </view>
+      </view>
+      <view class="yue_btn">
+        约她
+      </view>
+    </view>
+    <view class="person_state_middle">
+      <view class="img_box">
+        <image src="../img/map_1.png" class="person_middle_img"></image>
+      </view>
+      <view class="img_box img_box_mid">
+        <image src="../img/map_1.png" class="person_middle_img"></image>
+      </view>
+      <view class="img_box">
+        <image src="../img/map_1.png" class="person_middle_img"></image>
+      </view>
+    </view>
+    <view class="person_state_msg">
+      电影爱好者，有个伴与你一起看电影不是更完美呢？电影爱好者，有个伴与你一起看电影不是更完美呢 ？电影爱好者，有个伴与你一起看电影不是更完美呢？电影爱好者，有个伴与你一起看电影不是更完美呢？
+    </view>
+    <view class="person_state_foot">
+      <view class="person_foot_label">
+        看电影
+      </view>
+      <view class="perosn_foot_sevice">
+        线下服务
+      </view>
+    </view>
+    <view class="person_love">
+      <icon class="iconfont icon-xin"></icon>
+      <text class="love_num">829</text>
+      <view class="dingwei">
+        <icon class="iconfont icon-iconfontdingwei"></icon>
+        <text class="Juli">2.1km</text>
+      </view>
+    </view>
+  </view>
+
+</scroll-view>

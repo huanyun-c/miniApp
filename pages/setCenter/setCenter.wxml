@@ -1,0 +1,47 @@
+<!--pages/setCenter/setCenter.wxml-->
+<view class="person_btn_box">
+  <view class="person_btn_list">
+    <image src="../img/head@2x.png" class="person_btn_img"></image>
+    <view class="person_btn">
+      支付密码
+    </view>  
+    <view class="iconfont icon-xiangyou person_btn_xiangyou"></view>
+  </view>
+  <!-- <view class="person_btn_list">
+    <image src="../img/password@2x.png" class="person_btn_img"></image>
+    <view class="person_btn">
+      密码修改
+    </view>  
+    <view class="iconfont icon-xiangyou person_btn_xiangyou"></view>
+  </view> -->
+  <view class="person_btn_list">
+    <image src="../img/number@2x.png" class="person_btn_img"></image>
+    <view class="person_btn">
+      修改号码
+    </view>  
+    <view class="iconfont icon-xiangyou person_btn_xiangyou"></view>
+  </view>
+  <view class="person_btn_list" bindtap='gotoHelp'>
+    <image src="../img/help@2x.png" class="person_btn_img"></image>
+    <view class="person_btn">
+      帮助手册
+    </view>  
+    <view class="iconfont icon-xiangyou person_btn_xiangyou"></view>
+  </view>
+  <view class="person_btn_list">
+    <image src="../img/feedback@2x.png" class="person_btn_img"></image>
+    <view class="person_btn">
+      意见反馈
+    </view>  
+    <view class="iconfont icon-xiangyou person_btn_xiangyou"></view>
+  </view>
+  <view class="person_btn_list">
+    <image src="../img/me@2x.png" class="person_btn_img"></image>
+    <view class="person_btn">
+      关于我们
+    </view>  
+    <view class="iconfont icon-xiangyou person_btn_xiangyou"></view>
+  </view>
+</view>
+
+

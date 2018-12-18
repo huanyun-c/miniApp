@@ -1,0 +1,29 @@
+/* pages/helpCenter/helpCenter.wxss */
+.person_btn_list {
+  display:flex;
+  width:100%;
+  padding:0 22rpx;
+  height:112rpx;
+  line-height:112rpx;
+  overflow:hidden;
+  border-bottom:1px solid #efefef;
+}
+.person_btn_img {
+  width:40rpx;
+  height:40rpx;
+  padding-top:36rpx;
+  margin-right:25rpx;
+}
+.person_btn_xiangyou {
+  display:block;
+  height:112rpx;
+  font-size:28rpx;
+  margin:0;
+  position: absolute;
+  right:20rpx;
+}
+.person_btn {
+  color:#000;
+  font-size:30rpx;
+
+}

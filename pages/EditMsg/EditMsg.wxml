@@ -1,0 +1,116 @@
+<!--pages/EditMsg/EditMsg.wxml-->
+<view class="edit_headimg_box">
+  <image src="../img/picture@2x.png" class="edit_headimg"></image>
+</view>
+
+<view class="edit_msg_box">
+  <view class="edit_nickname_box">
+    <view class="edit_nickname">
+      昵称<i style="display:inline-block;width:100%;height:0;"></i>
+    </view>
+    <view class="p20">
+      :
+    </view>
+    <input class="edit_nickname_input"></input>
+  </view>
+  <view class="edit_nickname_box">
+    <view class="edit_nickname">
+      真实姓名<i style="display:inline-block;width:100%;height:0;"></i>
+    </view>
+    <view  class="p20">
+      :
+    </view>
+    <input class="edit_nickname_input"></input>
+  </view>
+  <view class="edit_nickname_box">
+    <view class="edit_nickname">
+      性别<i style="display:inline-block;width:100%;height:0;"></i>
+    </view>
+    <view  class="p20">
+      :
+    </view>
+    <radio-group class="radio-group" bindchange="radioChange">
+      <label class="radio" wx:for="{{items}}">
+        <radio value="{{item.id}}" checked="{{item.checked}}"/>{{item.sex}}
+      </label>
+    </radio-group>
+  </view>
+  <view class="edit_nickname_box">
+    <view class="edit_nickname">
+      出生日期<i style="display:inline-block;width:100%;height:0;"></i>
+    </view>
+    <view  class="p20">
+      :
+    </view>
+    <!-- <input class="edit_nickname_input"></input> -->
+    <picker mode="date" value="{{date}}" start="1940-09" end="2020-09" fields="month" bindchange="bindDateChange" style="flex:1;">
+    <view class="picker">
+      {{date}}
+    </view>
+  </picker>
+  </view>
+  <view class="edit_nickname_box">
+    <view class="edit_nickname">
+      学历<i style="display:inline-block;width:100%;height:0;"></i>
+    </view>
+    <view  class="p20">
+      :
+    </view>
+    <input class="edit_nickname_input"></input>
+  </view>
+  <view class="edit_nickname_box">
+    <view class="edit_nickname">
+      毕业学校<i style="display:inline-block;width:100%;height:0;"></i>
+    </view>
+    <view  class="p20">
+      :
+    </view>
+    <input class="edit_nickname_input"></input>
+  </view>
+  <view class="edit_nickname_box">
+    <view class="edit_nickname">
+      所在地<i style="display:inline-block;width:100%;height:0;"></i>
+    </view>
+    <view  class="p20">
+      :
+    </view>
+    <!-- <input class="edit_nickname_input"></input> -->
+    <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}" style="flex:1;overflow:hidden;">
+      <view class="picker" style="width:100%;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">
+        {{region[0]}}，{{region[1]}}，{{region[2]}}
+      </view>
+    </picker>
+  </view>
+  <view class="edit_textarea_box">
+    <view class="edit_nickname">
+      服务经验<i style="display:inline-block;width:100%;height:0;"></i>
+    </view>
+    <view class="p20">
+      :
+    </view>
+    <textarea class="edit_textarea"></textarea>
+  </view>
+  <view class="edit_textarea_box">
+    <view class="edit_nickname">
+      自我评价<i style="display:inline-block;width:100%;height:0;"></i>
+    </view>
+    <view class="p20">
+      :
+    </view>
+    <textarea class="edit_textarea"></textarea>
+  </view>
+  <view class="edit_title">
+    是否允许他人查看
+  </view>
+  <radio-group class="radio-group" bindchange="radioChange2">
+      <label class="radio" wx:for="{{Jurisdiction}}">
+        <radio value="{{item.id}}" checked="{{item.checked}}"/>{{item.value}}
+      </label>
+  </radio-group>
+  <view class="edit_title">
+    请设置查看时要收取多少活力值
+  </view>
+  
+</view>
+
+

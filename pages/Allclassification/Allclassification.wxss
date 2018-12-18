@@ -1,0 +1,37 @@
+/* pages/Allclassification/Allclassification.wxss */
+page {
+  padding:0 22rpx;
+}
+.classification_list_hot {
+  height:56rpx;
+  line-height: 56rpx;
+  display: flex;
+  font-size:30rpx;
+  margin-top:26rpx;
+}
+.classification_list_img {
+  width:32rpx;
+  height:36rpx;
+  margin-top:10rpx;
+  margin-right:28rpx;
+}
+.classification_item_list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.classification_item {
+  height:70rpx;
+  line-height:70rpx;
+  font-size:20rpx;
+  width:20%;
+  margin:10rpx 16rpx;
+  border:1px solid #eee;
+  text-align: center;
+  border-radius: 5rpx;
+}
+.classification_item:nth-child(4n + 1){
+  margin-left:0;
+}
+.classification_item:nth-child(4n){
+  margin-right:0;
+}

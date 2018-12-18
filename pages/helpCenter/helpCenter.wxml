@@ -1,0 +1,91 @@
+<!--pages/helpCenter/helpCenter.wxml-->
+<!--pages/setCenter/setCenter.wxml-->
+<view class="person_btn_box">
+  <view class="person_btn_list" data-pages="syxy" bindtap='gotosyxy'>
+    
+    <view class="person_btn">
+      使用协议
+    </view>  
+    <view class="iconfont icon-xiangyou person_btn_xiangyou"></view>
+  </view>
+  <view class="person_btn_list" data-pages="yszc" bindtap='gotosyxy'>
+    
+    <view class="person_btn">
+      隐私政策
+    </view>  
+    <view class="iconfont icon-xiangyou person_btn_xiangyou"></view>
+  </view>
+  <view class="person_btn_list" data-pages="fwxy" bindtap='gotosyxy'>
+   
+    <view class="person_btn">
+      服务协议
+    </view>  
+    <view class="iconfont icon-xiangyou person_btn_xiangyou"></view>
+  </view>
+  <view class="person_btn_list" data-pages="czxy" bindtap='gotosyxy'>
+    
+    <view class="person_btn">
+      充值协议
+    </view>  
+    <view class="iconfont icon-xiangyou person_btn_xiangyou"></view>
+  </view>
+  <view class="person_btn_list" data-pages="fwbz" bindtap='gotosyxy'>
+    
+    <view class="person_btn">
+      服务保障
+    </view>  
+    <view class="iconfont icon-xiangyou person_btn_xiangyou"></view>
+  </view>
+  <view class="person_btn_list" data-pages="gylh" bindtap='gotosyxy'>
+    
+    <view class="person_btn">
+      关于链活
+    </view>  
+    <view class="iconfont icon-xiangyou person_btn_xiangyou"></view>
+  </view>
+  <view class="person_btn_list" bindtap='gotoCommonProblem'>
+    
+    <view class="person_btn">
+      常见问题
+    </view>  
+    <view class="iconfont icon-xiangyou person_btn_xiangyou"></view>
+  </view>
+  <view class="person_btn_list" data-pages="gxzgz" bindtap='gotosyxy'>
+    
+    <view class="person_btn">
+      贡献值规则
+    </view>  
+    <view class="iconfont icon-xiangyou person_btn_xiangyou"></view>
+  </view>
+  <view class="person_btn_list" data-pages="hlbgz" bindtap='gotosyxy'>
+    
+    <view class="person_btn">
+      活力贝规则
+    </view>  
+    <view class="iconfont icon-xiangyou person_btn_xiangyou"></view>
+  </view>
+  <view class="person_btn_list" data-pages="shgf" bindtap='gotosyxy'>
+    
+    <view class="person_btn">
+      审核规范
+    </view>  
+    <view class="iconfont icon-xiangyou person_btn_xiangyou"></view>
+  </view>
+  <view class="person_btn_list" data-pages="lhyh" bindtap='gotosyxy'>
+    
+    <view class="person_btn">
+      链活用户
+    </view>  
+    <view class="iconfont icon-xiangyou person_btn_xiangyou"></view>
+  </view>
+  <view class="person_btn_list" data-pages="yhxwgf" bindtap='gotosyxy'>
+    
+    <view class="person_btn">
+      行为规范
+    </view>  
+    <view class="iconfont icon-xiangyou person_btn_xiangyou"></view>
+  </view>
+</view>
+
+
+

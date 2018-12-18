@@ -1,0 +1,36 @@
+<!--pages/accountCenter/accountCenter.wxml-->
+<view>
+  <image src="../img/￥@2x.png" class="account_img"></image>
+  <view class="account_money">
+    0.00
+  </view>
+</view>
+
+<view class="account_situation">
+  账单明细
+</view>
+
+<view class="account_money_box">
+  <view class="account_money_left">
+    <view class="font-w">
+      我的收入（元）
+    </view>
+    <view class="font-w">
+      0.00
+    </view>
+    <view class="account_forward">
+      提现
+    </view>
+  </view>
+  <view class="account_money_left">
+    <view class="font-w">
+      我的充值（元）
+    </view>
+    <view class="font-w">
+      0.00
+    </view>
+    <view class="account_forward account_forward_color" bindtap='account'>
+      充值
+    </view>
+  </view>
+</view>

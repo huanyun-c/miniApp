@@ -1,0 +1,62 @@
+/* pages/EditMsg/EditMsg.wxss */
+page {
+  font-size:28rpx;
+}
+.edit_headimg_box {
+  padding:42rpx 0 0 0;
+}
+.edit_headimg {
+  width:128rpx;
+  height:110rpx;
+  margin:auto;
+  display:block;
+}
+
+.edit_msg_box {
+  padding:0 30rpx;
+}
+.edit_nickname_box {
+  display:flex;
+  height:56rpx;
+  line-height:56rpx;
+  margin-top:48rpx;
+}
+.edit_nickname {
+   width:138rpx;
+   height:56rpx;
+   line-height: 56rpx;
+   text-align:justify;
+   font-size:30rpx;
+   color:#333;
+}
+.edit_nickname_input {
+  flex:1;
+  border:1px solid #fff;
+  border-radius:10rpx;
+  background:#eee;
+}
+.p20 {
+  padding:0 20rpx; 
+  height:56rpx;
+  line-height: 56rpx;
+}
+.edit_textarea_box {
+  display:flex;
+  margin-top:48rpx;
+}
+.edit_textarea {
+  flex:1;
+  border:1px solid #eee;
+}
+.radio {
+  margin-right:66rpx;
+}
+radio {
+  margin-right:10rpx;
+}
+.edit_title {
+  margin-top:34rpx;
+  height:56rpx;
+  line-height: 56rpx;
+  font-size:28rpx;
+}

@@ -1,0 +1,73 @@
+{
+  "pages": [
+    "pages/service_evaluation/service_evaluation",
+    "pages/demand_detail_completed/demand_detail_completed",
+    "pages/demand_revoke_appeal/demand_revoke_appeal",
+    "pages/skill_management/skill_management",
+    "pages/inviting_friends/inviting_friends",
+    "pages/index/index",
+    "pages/demand_details/demand_details",
+    "pages/logs/logs",
+    "pages/plus/plus",
+    "pages/demand/demand",
+    "pages/news/news",
+    "pages/personcenter/personcenter",
+    "pages/setCenter/setCenter",
+    "pages/helpCenter/helpCenter",
+    "pages/CommonProblem/CommonProblem",
+    "pages/EditMsg/EditMsg",
+    "pages/strategy/strategy",
+    "pages/feedback/feedback",
+    "pages/demandList/demandList",
+    "pages/Allclassification/Allclassification",
+    "pages/searchList/searchList",
+    "pages/switchcity/switchcity",
+    "pages/accountCenter/accountCenter",
+    "pages/accountbox/accountbox",
+    "pages/webview/webview",
+    "pages/releaseService/releaseService",
+    "pages/releaseDemand/releaseDemand"
+  ],
+  "window": {
+    "backgroundTextStyle": "#fff",
+    "navigationBarBackgroundColor": "#6e8eff",
+    "navigationBarTitleText": "链活首页",
+    "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "selectedColor": "#6e8eff",
+    "list": [
+      {
+        "iconPath": "pages/img/home.png",
+        "selectedIconPath": "pages/img/home_active.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "iconPath": "pages/img/skill.png",
+        "selectedIconPath": "pages/img/skill_active.png",
+        "pagePath": "pages/skill_management/skill_management",
+        "text": "技能管理"
+      },
+      {
+        "iconPath": "pages/img/plus.png",
+        "selectedIconPath": "pages/img/plus_active.png",
+        "pagePath": "pages/plus/plus"
+      },
+      {
+        "iconPath": "pages/img/demand.png",
+        "selectedIconPath": "pages/img/demand_active.png",
+        "pagePath": "pages/demand/demand",
+        "text": "需求管理"
+      },
+      {
+        "iconPath": "pages/img/news.png",
+        "selectedIconPath": "pages/img/news_active.png",
+        "pagePath": "pages/personcenter/personcenter",
+        "text": "个人中心"
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+<!--pages/Allclassification/Allclassification.wxml-->
+<view class="classification_list" wx:for="{{publishSkillList}}" wx:key="">
+  <view class="classification_list_hot">
+    <image src="{{item.publishSkills[0].detail}}" class="classification_list_img"></image>
+    <view>
+      {{item.publishSkills[0].mbName}}
+    </view>
+  </view>
+  <view class="classification_item_list">
+    <view class="classification_item" wx:for="{{item.publishSkills[0].lowerSkills}}" wx:key="" wx:for-item="itemName" bindtap='classificationItem' data-id="{{itemName.mbId}}" data-name="{{itemName.mbName}}" data-detail="{{itemName.info}}">
+      {{itemName.mbName}}
+    </view>
+  </view>
+</view>

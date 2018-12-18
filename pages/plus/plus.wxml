@@ -1,0 +1,17 @@
+<!--pages/plus/plus.wxml-->
+<view style="position:relative;bottom:-600rpx;">
+  <view style="display:flex;width:480rpx;margin:auto;">
+    <view style="margin:0 50rpx;" bindtap='gotoDemand'>
+      <image src="../img/demand@2x.png" style="width:140rpx;height:140rpx;"></image>
+      <view style="font-size:36rpx;width:160rpx;">
+        发布需求
+      </view>
+    </view>
+    <view style="margin:0 50rpx;" bindtap='gotoService'>
+      <image src="../img/serve@2x.png" style="width:140rpx;height:140rpx;"></image>
+      <view style="font-size:36rpx;width:160rpx;">
+        发布服务
+      </view>
+    </view>
+  </view>
+</view>

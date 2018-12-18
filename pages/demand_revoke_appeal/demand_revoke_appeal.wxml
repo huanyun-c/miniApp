@@ -1,0 +1,25 @@
+<!-- pages/demand_revoke_appeal/demand_revoke_appeal.wxml -->
+<view class="page">
+    <view class="part">
+        <view class="title">撤销原因：</view>
+        <radio-group class="radio-group" bindchange="radioChange">
+            <label class="radio" wx:for="{{items}}">
+                <radio value="{{item.name}}" checked="{{item.checked}}" />
+                {{item.value}}
+            </label>
+        </radio-group>
+    </view>
+    <view class="part">
+        <view class="title">具体原因：</view>
+        <textarea placeholder="" maxlength="200" bindinput="wordsNum"/>
+        <text>{{currentWordNumber|0}}/{{maxWordNumber}}</text>
+    </view>
+
+    <view class="tip-part">
+        <text>提示：提交撤销申诉后系统将会尽快对此撤销内容进行判定，若判定成功，平台托管的酬劳金将退回您的账户，您发布的此需求将为您删除。</text>
+    </view>
+
+    <view class='btns'>
+        <button class='btn' bindtap="">提交</button>
+    </view>
+</view>

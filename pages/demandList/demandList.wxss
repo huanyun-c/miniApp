@@ -1,0 +1,152 @@
+/* pages/demandList/demandList.wxss */
+.person_state_nameBox{
+  margin-left:30rpx;
+}
+.person_state_box {
+  margin-bottom:20rpx;
+  padding:22rpx 22rpx 40rpx 22rpx;
+  box-sizing: border-box;
+  border-bottom:1px solid #f6f6f6;
+  background: #fff;
+}
+.person_state_box:last-child{
+  margin-bottom:0;
+}
+.person_state_top {
+  display: flex;
+}
+.person_state_img {
+  width:62rpx;
+  height:62rpx;
+  border-radius: 50%;
+}
+.person_nickname_box {
+  display: flex;
+  height:40rpx;
+  line-height: 40rpx;
+}
+.person_nickname {
+  font-size:22rpx;
+  color:#333;
+  height:40rpx;
+  line-height: 40rpx;
+}
+.person_icon_nv {
+  height:40rpx;
+  line-height: 40rpx;
+  display: block;
+  font-size:16rpx;
+  padding: 0 10rpx;
+}
+.person_sex {
+  height:40rpx;
+  line-height: 40rpx;
+  display: block;
+  font-size:18rpx;
+  color:#c5c5c5;
+}
+.person_grade_box {
+  height:22rpx;
+  line-height: 22rpx;
+  box-sizing: border-box;
+  display: flex;
+}
+.person_grade_img {
+  width:20rpx;
+  height:20rpx;
+}
+.person_grade {
+  color:#6e8dff;
+  font-size:16rpx;
+  height:22rpx;
+  line-height: 22rpx;
+}
+.yue_btn {
+  position:absolute;
+  right:20rpx;
+  width:62rpx;
+  height:62rpx;
+  font-size:18rpx;
+  color:#fff;
+  background:#fe7398;
+  text-align:center;
+  line-height:62rpx;
+  border-radius: 50%;
+}
+.person_state_middle {
+  display: flex;
+}
+.person_state_middle .img_box {
+  width:33.33%;
+  padding:28rpx 5rpx;
+}
+.img_box_mid {
+  padding:28rpx 22rpx !important;
+}
+.person_middle_img {
+  width:100%;
+  height:218rpx;
+}
+.person_state_msg {
+  font-size:22rpx;
+  color:#010101;
+  line-height: 44rpx;
+}
+.person_state_foot {
+  margin-top:20rpx;
+  height:82rpx;
+  border-bottom:1px solid #eee;
+}
+.person_foot_label {
+  position:absolute;
+  left:22rpx;
+  width:126rpx;
+  height:42rpx;
+  background:#6e8eff;
+  color:#fff;
+  border-radius:10rpx;
+  font-size:24rpx;
+  text-align:center;
+  line-height:42rpx;
+}
+.perosn_foot_sevice {
+  position:absolute;
+  right:22rpx;
+  font-size:24rpx;
+  height:42rpx;
+  line-height:42rpx;
+  color:#ccc;
+}
+.person_love {
+  position: relative;
+}
+.icon-xin {
+  color:#ff98b1;
+  font-size:26rpx;
+}
+.love_num {
+  font-size:20rpx;
+  color:#c5c5c5;
+  padding-left:15rpx;
+}
+.dingwei {
+  position:absolute;
+  right:22rpx;
+  top:0;
+}
+
+.dingwei .icon-iconfontdingwei {
+  color:#c5c5c5 !important;
+  font-size:20rpx !important;
+}
+.Juli {
+  padding-left:16rpx;
+  color:#c5c5c5;
+  font-size:20rpx;
+}
+.icon-nv {
+  color:#ff35c6;
+  font-size:14rpx;
+  height:22rpx;
+  width:22rpx;
+}

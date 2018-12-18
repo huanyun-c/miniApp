@@ -1,0 +1,400 @@
+<!--pages/demand/demand.wxml-->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">  
+      <block wx:for="{{imgUrls}}" wx:key="">  
+        <swiper-item>  
+            <image src="{{item}}" class="slide-image"/>  
+        </swiper-item>  
+      </block>  
+</swiper>
+
+
+<view class="screen_box">
+  <view data-index="0" class="{{ nowCurrent == 0 ? 'screen_li isscreen' : 'screen_li' }}" bindtap='screenLiChange'>
+    匹配中
+  </view>
+  <view data-index="1" class="{{ nowCurrent == 1 ? 'screen_li isscreen' : 'screen_li' }}" bindtap='screenLiChange'>
+    进行中
+  </view>
+  <view data-index="2" class="{{ nowCurrent == 2 ? 'screen_li isscreen' : 'screen_li' }}" bindtap='screenLiChange'>
+    已成交
+  </view>
+  <view data-index="3" class="{{ nowCurrent == 3 ? 'screen_li isscreen' : 'screen_li' }}" bindtap='screenLiChange'>
+    已过期
+  </view>
+</view>
+
+<swiper style="height:calc(100% - 306rpx);" bindchange="swiperChange" current="{{swiperIndex}}">
+   <swiper-item>
+    <scroll-view style="height:100%;" scroll-y="true" scroll-top="0" lower-threshold="50" scroll-with-animation="true" enable-back-to-top="true" bindscrolltolower="scrolltolower">
+    <!-- 服务筛选start -->
+        <view class="service_box" bindtap='gotoDemandDetails'>
+          <view class="disflex service_box_top">
+            <image src="../img/head_1@2x.png" class="service_headImg"></image>
+            <view class="service_box_top_right">
+              <view class="disflex service_box_top_right_nickname">
+                <view class="service_nickname">
+                  网游陪玩
+                </view>
+                <view class="service_skill">
+                  匹配中
+                </view>  
+              </view>
+              <view class="disflex service_msg_box">
+                <view class="service_msg">
+                 2天后过期
+                </view>
+                <view class="service_msg">
+                  发布：<text>2018-2-4</text>
+                </view>
+              </view>
+            </view>
+          </view>
+          <!-- 分享btn -->
+          <view class="receipt_btn_box">
+            已匹配到3人愿意受理您的需求
+            <image src="../img/head_1@2x.png" class="receipt_headImg"></image>
+            <image src="../img/head_1@2x.png" class="receipt_headImg"></image>
+            <image src="../img/head_1@2x.png" class="receipt_headImg"></image>
+          </view>
+        </view>
+
+       <view class="service_box" bindtap='gotoDemandDetails'>
+          <view class="disflex service_box_top">
+            <image src="../img/head_1@2x.png" class="service_headImg"></image>
+            <view class="service_box_top_right">
+              <view class="disflex service_box_top_right_nickname">
+                <view class="service_nickname">
+                  网游陪玩
+                </view>
+                <view class="service_skill">
+                  匹配中
+                </view>  
+              </view>
+              <view class="disflex service_msg_box">
+                <view class="service_msg">
+                 2天后过期
+                </view>
+                <view class="service_msg">
+                  发布：<text>2018-2-4</text>
+                </view>
+              </view>
+            </view>
+          </view>
+          <!-- 分享btn -->
+          <view class="receipt_btn_box">
+            已匹配到3人愿意受理您的需求
+            <image src="../img/head_1@2x.png" class="receipt_headImg"></image>
+            <image src="../img/head_1@2x.png" class="receipt_headImg"></image>
+            <image src="../img/head_1@2x.png" class="receipt_headImg"></image>
+          </view>
+        </view>
+
+        <view class="service_box" bindtap='gotoDemandDetails'>
+          <view class="disflex service_box_top">
+            <image src="../img/head_1@2x.png" class="service_headImg"></image>
+            <view class="service_box_top_right">
+              <view class="disflex service_box_top_right_nickname">
+                <view class="service_nickname">
+                  网游陪玩
+                </view>
+                <view class="service_skill">
+                  匹配中
+                </view>  
+              </view>
+              <view class="disflex service_msg_box">
+                <view class="service_msg">
+                 2天后过期
+                </view>
+                <view class="service_msg">
+                  发布：<text>2018-2-4</text>
+                </view>
+              </view>
+            </view>
+          </view>
+          <!-- 分享btn -->
+          <view class="receipt_btn_box">
+            已匹配到3人愿意受理您的需求
+            <image src="../img/head_1@2x.png" class="receipt_headImg"></image>
+            <image src="../img/head_1@2x.png" class="receipt_headImg"></image>
+            <image src="../img/head_1@2x.png" class="receipt_headImg"></image>
+          </view>
+        </view>
+
+       <view class="service_box" bindtap='gotoDemandDetails'>
+          <view class="disflex service_box_top">
+            <image src="../img/head_1@2x.png" class="service_headImg"></image>
+            <view class="service_box_top_right">
+              <view class="disflex service_box_top_right_nickname">
+                <view class="service_nickname">
+                  网游陪玩
+                </view>
+                <view class="service_skill">
+                  匹配中
+                </view>  
+              </view>
+              <view class="disflex service_msg_box">
+                <view class="service_msg">
+                 2天后过期
+                </view>
+                <view class="service_msg">
+                  发布：<text>2018-2-4</text>
+                </view>
+              </view>
+            </view>
+          </view>
+          <!-- 分享btn -->
+          <view class="receipt_btn_box">
+            已匹配到3人愿意受理您的需求
+            <image src="../img/head_1@2x.png" class="receipt_headImg"></image>
+            <image src="../img/head_1@2x.png" class="receipt_headImg"></image>
+            <image src="../img/head_1@2x.png" class="receipt_headImg"></image>
+          </view>
+        </view>
+
+       <view class="service_box" bindtap='gotoDemandDetails'>
+          <view class="disflex service_box_top">
+            <image src="../img/head_1@2x.png" class="service_headImg"></image>
+            <view class="service_box_top_right">
+              <view class="disflex service_box_top_right_nickname">
+                <view class="service_nickname">
+                  网游陪玩
+                </view>
+                <view class="service_skill">
+                  匹配中
+                </view>  
+              </view>
+              <view class="disflex service_msg_box">
+                <view class="service_msg">
+                 2天后过期
+                </view>
+                <view class="service_msg">
+                  发布：<text>2018-2-4</text>
+                </view>
+              </view>
+            </view>
+          </view>
+          <!-- 分享btn -->
+          <view class="receipt_btn_box">
+            已匹配到3人愿意受理您的需求
+            <image src="../img/head_1@2x.png" class="receipt_headImg"></image>
+            <image src="../img/head_1@2x.png" class="receipt_headImg"></image>
+            <image src="../img/head_1@2x.png" class="receipt_headImg"></image>
+          </view>
+        </view>
+      <!-- 服务列表end -->
+   
+     <!-- 待接单end -->
+    </scroll-view>
+    
+   </swiper-item>
+
+   <!-- 匹配中页面 -->
+   <swiper-item>
+    <scroll-view style="height:100%;" scroll-y="true" scroll-top="0" lower-threshold="50" scroll-with-animation="true" enable-back-to-top="true" bindscrolltolower="scrolltolower">
+      <!-- 服务列表start -->
+         <view class="service_box" bindtap='gotoDemandDetails'>
+          <view class="disflex service_box_top">
+            <image src="../img/head_1@2x.png" class="service_headImg"></image>
+            <view class="service_box_top_right">
+              <view class="disflex service_box_top_right_nickname">
+                <view class="service_nickname">
+                  网游陪玩
+                </view>
+                <view class="service_skill">
+                  进行中
+                </view>  
+              </view>
+              <view class="disflex service_msg_box">
+                <view class="service_msg">
+                 2天后过期
+                </view>
+                <view class="service_msg">
+                  发布：<text>2018-2-4</text>
+                </view>
+              </view>
+            </view>
+          </view>
+          <!-- 分享btn -->
+          <view class="receipt_btn_box">
+            已匹配到3人愿意受理您的需求
+            <image src="../img/head_1@2x.png" class="receipt_headImg"></image>
+            <image src="../img/head_1@2x.png" class="receipt_headImg"></image>
+            <image src="../img/head_1@2x.png" class="receipt_headImg"></image>
+          </view>
+        </view>
+      <!-- 服务列表end -->
+     <!-- 进行中end -->
+    </scroll-view>
+   </swiper-item>
+   <!-- 已成交页面 -->
+   <swiper-item>
+    <scroll-view style="height:100%;" scroll-y="true" scroll-top="0" lower-threshold="50" scroll-with-animation="true" enable-back-to-top="true" bindscrolltolower="scrolltolower">
+      <view class="service_box" bindtap='gotoDemandDetails'>
+          <view class="disflex service_box_top">
+            <image src="../img/head_1@2x.png" class="service_headImg"></image>
+            <view class="service_box_top_right">
+              <view class="disflex service_box_top_right_nickname">
+                <view class="service_nickname">
+                  网游陪玩
+                </view>
+                <view class="service_skill">
+                  已成交
+                </view>  
+              </view>
+              <view class="disflex service_msg_box">
+                <view class="service_msg">
+                 2天后过期
+                </view>
+                <view class="service_msg">
+                  发布：<text>2018-2-4</text>
+                </view>
+              </view>
+            </view>
+          </view>
+          <!-- 分享btn -->
+          <view class="receipt_btn_box">
+            已匹配到3人愿意受理您的需求
+            <image src="../img/head_1@2x.png" class="receipt_headImg"></image>
+            <image src="../img/head_1@2x.png" class="receipt_headImg"></image>
+            <image src="../img/head_1@2x.png" class="receipt_headImg"></image>
+          </view>
+        </view>
+
+        <view class="service_box" bindtap='gotoDemandDetails'>
+          <view class="disflex service_box_top">
+            <image src="../img/head_1@2x.png" class="service_headImg"></image>
+            <view class="service_box_top_right">
+              <view class="disflex service_box_top_right_nickname">
+                <view class="service_nickname">
+                  网游陪玩
+                </view>
+                <view class="service_skill">
+                  已成交
+                </view>  
+              </view>
+              <view class="disflex service_msg_box">
+                <view class="service_msg">
+                 2天后过期
+                </view>
+                <view class="service_msg">
+                  发布：<text>2018-2-4</text>
+                </view>
+              </view>
+            </view>
+          </view>
+          <!-- 分享btn -->
+          <view class="receipt_btn_box">
+            已匹配到3人愿意受理您的需求
+            <image src="../img/head_1@2x.png" class="receipt_headImg"></image>
+            <image src="../img/head_1@2x.png" class="receipt_headImg"></image>
+            <image src="../img/head_1@2x.png" class="receipt_headImg"></image>
+          </view>
+        </view>
+
+        <view class="service_box" bindtap='gotoDemandDetails'>
+          <view class="disflex service_box_top">
+            <image src="../img/head_1@2x.png" class="service_headImg"></image>
+            <view class="service_box_top_right">
+              <view class="disflex service_box_top_right_nickname">
+                <view class="service_nickname">
+                  网游陪玩
+                </view>
+                <view class="service_skill">
+                  已成交
+                </view>  
+              </view>
+              <view class="disflex service_msg_box">
+                <view class="service_msg">
+                 2天后过期
+                </view>
+                <view class="service_msg">
+                  发布：<text>2018-2-4</text>
+                </view>
+              </view>
+            </view>
+          </view>
+          <!-- 分享btn -->
+          <view class="receipt_btn_box">
+            已匹配到3人愿意受理您的需求
+            <image src="../img/head_1@2x.png" class="receipt_headImg"></image>
+            <image src="../img/head_1@2x.png" class="receipt_headImg"></image>
+            <image src="../img/head_1@2x.png" class="receipt_headImg"></image>
+          </view>
+        </view>
+    </scroll-view>
+   </swiper-item>
+   <!-- 已过期页面 -->
+   <swiper-item>
+    <scroll-view style="height:100%;" scroll-y="true" scroll-top="0" lower-threshold="50" scroll-with-animation="true" enable-back-to-top="true" bindscrolltolower="scrolltolower">
+      <view class="service_box" bindtap='gotoDemandDetails'>
+          <view class="disflex service_box_top service_box_top_overdue">
+            <image src="../img/head_1@2x.png" class="service_headImg"></image>
+            <view class="service_box_top_right">
+              <view class="disflex service_box_top_right_nickname">
+                <view class="service_nickname">
+                  网游陪玩
+                </view>
+                <view class="service_skill service_skill_ccc">
+                  已过期
+                </view>  
+              </view>
+              <view class="disflex service_msg_box">
+                <view class="service_msg service_msg_40">
+                  过期时间：<text>2018-2-4</text>
+                </view>
+              </view>
+            </view>
+          </view>
+         
+        </view>
+
+        <view class="service_box" bindtap='gotoDemandDetails'>
+          <view class="disflex service_box_top service_box_top_overdue">
+            <image src="../img/head_1@2x.png" class="service_headImg"></image>
+            <view class="service_box_top_right">
+              <view class="disflex service_box_top_right_nickname">
+                <view class="service_nickname">
+                  网游陪玩
+                </view>
+                <view class="service_skill service_skill_ccc">
+                  已过期
+                </view>  
+              </view>
+              <view class="disflex service_msg_box">
+                <view class="service_msg service_msg_40">
+                  过期时间：<text>2018-2-4</text>
+                </view>
+              </view>
+            </view>
+          </view>
+          
+        </view>
+
+        <view class="service_box" bindtap='gotoDemandDetails'>
+          <view class="disflex service_box_top service_box_top_overdue">
+            <image src="../img/head_1@2x.png" class="service_headImg"></image>
+            <view class="service_box_top_right">
+              <view class="disflex service_box_top_right_nickname">
+                <view class="service_nickname">
+                  网游陪玩
+                </view>
+                <view class="service_skill service_skill_ccc">
+                  已过期
+                </view>  
+              </view>
+              <view class="disflex service_msg_box">
+                <view class="service_msg service_msg_40">
+                  过期时间：<text>2018-2-4</text>
+                </view>
+              </view>
+            </view>
+          </view>
+          
+        </view>
+    </scroll-view>
+   </swiper-item>
+</swiper>
+
+
+
+

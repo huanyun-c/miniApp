@@ -1,0 +1,69 @@
+<!--pages/releaseService/releaseService.wxml-->
+<view class="releaseService_box">
+  <view class="top_box">
+
+  <view>
+    <view class="category_title">
+      服务品类
+    </view>
+    <view class="category_detail">
+      {{serTypeValue}}
+    </view>
+  </view>
+  <view class="category_msg">
+    {{serTypeValueDetail}}
+  </view>
+</view>
+
+<view class="mid_box">
+  <view class="category_title">
+    服务信息
+  </view>
+  <textarea placeholder="请填写与您技能相关的介绍，最少20个字" maxlength="150" placeholder-style="color:#c1c1c1;font-size:26rpx;"  class="category_textarea" bindinput="num_input"/>
+
+  <view class="textarea_num">
+    <text>{{textarea_num}}</text>/150
+  </view>
+</view>
+
+<view class="third_box">
+  <view class="category_title">
+    <view style="float:left;">
+      服务方式
+    </view>
+    <view style="float:right;color:#999;">
+      线下服务
+    </view>
+  </view>
+
+  <view class="third_input_box">
+    <view style="height:75rpx;">
+      <image src="../img/personage@2x.png" class="category_image"></image>
+    </view>
+    <view class="category_input">
+      <input type="number" placeholder='其他服务者均价：50' placeholder-style="color:#ccc;font-size:26rpx;" bindinput="price_input"></input>
+    </view>
+  </view>
+  <view class="images_box">
+    <image wx:for="{{tempFilePaths}}" src="{{item}}" class="puls_image" style="margin-right:20rpx;"></image>
+    <image src="../img/+@2x.png" class="puls_image" bindtap='openImage'></image>
+  </view>
+
+  <view class="mtop50 category_image_title">
+    添加服务相册（暂时只支持一张图片）
+  </view>
+
+  <view class="category_image_title">
+    展示颜值，技能兼具自己（选填）
+  </view>
+
+  <view bindtap='uploadFileFun' class="submitBtn">
+    确认提交
+  </view>
+
+  <view class="category_image_title">
+    发布服务成功，即为同意《链活服务协议》
+  </view>
+</view>
+</view>
+

@@ -1,0 +1,20 @@
+<!--pages/inviting_friends/inviting_friends.wxml-->
+<view class="page">
+    <image src="../img/abbr.png" class="ewm"></image>
+    <view class="title">通过以下方式成功邀请1位好友加入</view>
+    <view class="text">您将获得活力贝和贡献值</view>
+
+    <view class="share-box">
+        <view class="" style="color:#333;font-size:32rpx;">凡成功邀请一位好友注册链活</view>
+        <view class="" style="color:#6d8eff;font-size:36rpx;margin:20rpx 0;">您和您的好友都将获得活力贝奖励</view>
+        <view class="" style="color:#999;font-size:26rpx;">您邀请的好友在平台每获得一笔收益，您将获得额外奖励！</view>
+        <view class="share-icons">
+            <image src="../img/WeChat.png"></image>
+            <image src="../img/qq.png"></image>
+            <image src="../img/circleofFriends.png"></image>
+            <image src="../img/qq_interspace.png"></image>
+        </view>
+    </view>
+
+    <view class="text" style="color:#999;">长按二维码自动保存</view>
+</view>

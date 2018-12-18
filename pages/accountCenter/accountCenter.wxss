@@ -1,0 +1,50 @@
+/* pages/accountCenter/accountCenter.wxss */
+.account_img {
+  width:155rpx;
+  height:155rpx;
+  display: block;
+  margin:auto;
+  margin-top:64rpx;
+  margin-bottom:32rpx;
+}
+.account_money {
+  font-size:50rpx;
+  height:56rpx;
+  line-height: 56rpx;
+  color:#6f8ffe;
+  text-align: center;
+  font-weight: bold;
+}
+
+.account_situation {
+  position: absolute;
+  top:10rpx;
+  right:20rpx;
+  color:#6f8ffe;
+  font-size:30rpx;
+}
+.account_money_box {
+  display: flex;
+  margin-top:114rpx;
+  padding:0 30rpx;
+}
+.account_money_left {
+  flex:1;
+  padding:0 50rpx;
+  text-align: center;
+  font-size:32rpx;
+}
+.font-w{
+  font-weight: bold;
+  margin-bottom:40rpx;
+}
+.account_forward {
+  border:1px solid #eee;
+  height:84rpx;
+  line-height: 84rpx;
+  border-radius: 20rpx;
+}
+.account_forward_color {
+  border:1px solid #fe497c;
+  color:#fe497c;
+}
